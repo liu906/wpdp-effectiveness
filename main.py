@@ -247,13 +247,51 @@ def run_model_by_config_path(data_split_config_path,data_set_column_config,datas
         prediction_result_path = './prediction_result/'+modelName+'/'+resFolder + '/'
         res_file_name = train_path.split('/')[-1] + '_' + test_path.split('/')[-1]
         prediction_result_df.to_csv(prediction_result_path + res_file_name, index=False)
+def run():
+    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    #                          data_set_column_config='./script/dataset_column_config.csv',
+    #                          dataset='jureczko',
+    #                          modelName='LR')
+    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    #                          data_set_column_config='./script/dataset_column_config.csv',
+    #                          dataset='jureczko',
+    #                          modelName='KNN10')
+    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    #                          data_set_column_config='./script/dataset_column_config.csv',
+    #                          dataset='jureczko',
+    #                          modelName='KNN5')
+    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    #                          data_set_column_config='./script/dataset_column_config.csv',
+    #                          dataset='jureczko',
+    #                          modelName='KNN1')
+    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    #                          data_set_column_config='./script/dataset_column_config.csv',
+    #                          dataset='jureczko',
+    #                          modelName='KNN3')
 
-if __name__ == '__main__':
-
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
+                         data_set_column_config='./script/dataset_column_config.csv',
+                         dataset='jureczko',
+                         modelName='LR')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
                              data_set_column_config='./script/dataset_column_config.csv',
                              dataset='jureczko',
-                             modelName='LR')
+                             modelName='KNN1')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN3')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN5')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN10')
+
+if __name__ == '__main__':
+    run()
 
     # parser = argparse.ArgumentParser(
     #     description="use this file to train and test defect prediction model")
