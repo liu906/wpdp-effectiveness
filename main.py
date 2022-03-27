@@ -10,6 +10,7 @@ import pandas as pd
 import os
 import numpy as np
 import logging
+from pathlib import Path
 
 logging.basicConfig(level=logging.DEBUG, filename='./log', format='%(asctime)s:%(levelname)s:%(message)s')
 
@@ -112,8 +113,8 @@ def getFeatures(train_data,test_data,feature_type):
 
 
 def normal_prediction(train_data, test_data, model):
-    if model.endswith('diff'):
-        test_data = testDiffTrain(train_data, test_data)
+    # if model.endswith('diff'):
+    #     test_data = testDiffTrain(train_data, test_data)
 
     id_train = train_data[IDs]
     id_test = test_data[IDs]
@@ -137,8 +138,8 @@ def normal_prediction(train_data, test_data, model):
     print('accuracy: ', accuracy_score(pipe.predict(X_test), y_test))
     print('recall: ', recall_score(pipe.predict(X_test), y_test))
     print('f1: ', f1_score(pipe.predict(X_test), y_test))
-
     return id_test
+
 def newIsBuggy(train_data,test_data):
     list_IDs_train = train_data[IDs].agg(' '.join, axis=1).values
     list_IDs_test = test_data[IDs].agg(' '.join, axis=1).values
@@ -155,19 +156,13 @@ def newIsBuggy(train_data,test_data):
 
     return temp
 
+
 def testDiffTrain(train_data, test_data, diff_data):
     if len(IDs) > 1:
-        # list_IDs_train = train_data[IDs].agg(' '.join, axis=1).values
         list_IDs_test = test_data[IDs].agg(' '.join, axis=1).values
     else:
-        # list_IDs_train = train_data[IDs[0]].values
         list_IDs_test = test_data[IDs[0]].values
-    # list_IDs_train = [item.replace('$', '.') for item in list_IDs_train]
     list_IDs_test = [item.replace('$', '.') for item in list_IDs_test]
-
-
-    # set_IDs_train = set(list_IDs_train)
-    # set_IDs_test = set(list_IDs_test)
     df_same_modules = diff_data.loc[diff_data['isSame'] == True]
     list_same_id = df_same_modules['old'].tolist()
     same_id_index_test = []
@@ -180,11 +175,23 @@ def testDiffTrain(train_data, test_data, diff_data):
     test_data_without_dup = test_data.iloc[not_same_index_test]
     return test_data_without_dup
 
-def test():
-    # train_path = './cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/ant/ant_1.3.csv'
-    # test_path = './cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/ant/ant_1.4.csv'
-    # diff_path = './result/ant-1.3_ant-1.4_class.csv'
-    df_path_config = pd.read_csv('./script/path_config_jureczko.csv')
+
+def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_info):
+    '''
+
+    :param config_path: string, path of config csv file of a dataset,
+           file contains (training path, test path, module diff information file path) combinations of
+           cross-version defect prediction
+    :param config_path_diffToPreviousRelease: string, path to save the
+           (training path, test data without duplication path) of a dataset
+    :param dataset_diff_info: csv file path to save the number of new modules (not show in the previous release)
+           in a test file and total number of modules of the test file
+    :return: none
+    '''
+
+    df_path_config = pd.read_csv(config_path)
+    res_list = []
+    list_path_config_diffData = []
 
     for idx, row in df_path_config.iterrows():
         train_path = row['train_path']
@@ -194,12 +201,59 @@ def test():
         test_data = pd.read_csv(test_path)
         diff_data = pd.read_csv(diff_path)
         test_data_without_dup = testDiffTrain(train_data, test_data, diff_data)
-        logging.debug('removing duplicate instances (same source code with training release) from test data')
-        logging.debug('train_path;test_path;nrow_test_data;nrow_test_data_without_dup')
-        logging.debug(train_path+';'+test_path+';'+str(test_data.shape[0])+';'+str(test_data_without_dup.shape[0]))
+        Path("./data_new").mkdir(parents=True, exist_ok=True)
+
+        test_path_diffToPreviousRelease = './data_new/'+'diffToPreviousRelease_'+test_path.split('/')[-1]
+        test_data_without_dup.to_csv(test_path_diffToPreviousRelease,index=False)
+
+        list_path_config_diffData.append([train_path, test_path_diffToPreviousRelease])
+
+        res_list.append([train_path, test_path, test_data.shape[0], test_data_without_dup.shape[0]])
+
+
+    res_df = pd.DataFrame(res_list, columns=['train_path', 'test_path', 'nrow_test_data', 'nrow_test_data_without_dup'])
+    res_df.to_csv(dataset_diff_info, index=False)
+    df_path_config_diffData = pd.DataFrame(list_path_config_diffData,columns=['train_path', 'test_path'])
+    df_path_config_diffData.to_csv(config_path_diffToPreviousRelease, index=False)
+
+
+def test():
+    config_path = './script/path_config_jureczko.csv'
+    config_path_diffToPreviousRelease = './script/path_config_jureczko_diffToPreviousRelease.csv'
+    dataset_diff_info = './result/jureczko_diff_info.csv'
+    get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_info)
+
+def run_model_by_config_path(data_split_config_path,data_set_column_config,dataset,modelName):
+    df_config = pd.read_csv(data_split_config_path)
+    df_column_config = pd.read_csv(data_set_column_config, index_col=0)
+
+    LABEL = df_column_config.loc[dataset, 'label']
+    DROPS = df_column_config.loc[dataset, 'drops']
+    SLOC = df_column_config.loc[dataset, 'sloc']
+    IDs = df_column_config.loc[dataset, 'ids']
+
+    resFolder = df_column_config.loc[dataset, 'res_folder']
+    for idx, row in df_config.iterrows():
+        train_path = row['train_path']
+        test_path = row['test_path']
+        train_data = pd.read_csv(train_path)
+        test_data = pd.read_csv(test_path)
+
+        if(sum(train_data[LABEL].values)==0):
+            print('cannot train the prediction model because no buggy instance in training file')
+
+        prediction_result_df = normal_prediction(train_data, test_data, modelName)
+        '../prediction_result/KNN10/ELFF_Method_result/'
+        prediction_result_path = './prediction_result/'+modelName+'/'+resFolder + '/'
+        res_file_name = train_path.split('/')[-1] + '_' + test_path.split('/')[-1]
+        prediction_result_df.to_csv(prediction_result_path + res_file_name, index=False)
 
 if __name__ == '__main__':
-    test()
+
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='LR')
 
     # parser = argparse.ArgumentParser(
     #     description="use this file to train and test defect prediction model")

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e16551c-7fb4-4278-8708-3d58a6151c41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/cross-version.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/BugDet-master/.idea/BugDet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jEdit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jEdit.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/LatestVersion/LatestVersion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/MacOSX/MacOSX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/QuickNotepad/QuickNotepad.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/dataset_column_config.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/docs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-complete.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-core.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-dist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-rake-plugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-stdlib.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/man.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/docs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-complete.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-core.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-dist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-rake-plugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-stdlib.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/man.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jEdit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jEdit.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/LatestVersion/LatestVersion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/MacOSX/MacOSX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/QuickNotepad/QuickNotepad.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="a5aju82y" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2604q2oNqxGpwiZ4xeNb32A1Yiz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/script/cpdp_KNN10.bat" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main without parameter">
+    <configuration name="compare" type="PythonConfigurationType" factoryName="Python">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main without parameter" type="PythonConfigurationType" factoryName="Python">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv  ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv  ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pureCompare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pureCompare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cpdp_KNN10" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/script/cpdp_KNN10.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="cpdp_KNN10.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/script/cpdp_KNN10.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main without parameter" />
+      <item itemvalue="Python.compare" />
+      <item itemvalue="Python.pureCompare" />
+      <item itemvalue="Shell Script.cpdp_KNN10" />
+      <item itemvalue="Shell Script.cpdp_KNN10.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.cpdp_KNN10.sh" />
+        <item itemvalue="Python.pureCompare" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e16551c-7fb4-4278-8708-3d58a6151c41" name="Changes" comment="" />
+      <created>1646547358599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646547358599</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>238</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
