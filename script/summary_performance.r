@@ -197,6 +197,47 @@ summaryPerformance2 <- function(root_path,threshold,mode){
   return(total_res)
 }
 
-
+summaryPerformance_by_files <- function(files,threshold,mode){
+  cols <- c('community','source','target','tp','fp','tn','fn','f1','g1','pf','pci','pii','recall','mcc','ifa','ifap','mdd','ifap2','ifa_pii','ifa_pci','ifap3')
+  
+  total_res <- data.frame(matrix(nrow = 0,ncol = length(cols)))
+  colnames(total_res) <- cols
+  
+  for(file in files){
+    cat(file,'\n')
+    data <- read.csv(file,stringsAsFactors=FALSE)
+    
+    
+    data[data$predictLabel=='False','predictLabel'] = 0
+    data[data$predictLabel=='True','predictLabel'] = 1
+    data[data$actualBugLabel=='False','actualBugLabel'] = 0
+    data[data$actualBugLabel=='True','actualBugLabel'] = 1
+    
+    data$predictedValue <- as.numeric(data$predictedValue)
+    data$predictLabel <- as.numeric(data$predictLabel)
+    data$actualBugLabel <- as.numeric(data$actualBugLabel)
+    
+    perfs <- calculateIndicator(data,threshold = threshold)
+    community <- strsplit(file,split = '-')[[1]][1]
+    source <- strsplit(file,split = '_')[[1]][1]
+    target <- strsplit(file,split = '_')[[1]][2]
+    total_res[nrow(total_res)+1,] <- c(community,source,target,perfs)
+  }
+  if(mode=='SSC'){
+    total_res$roi = as.numeric(total_res$recall)/ as.numeric(total_res$pii)  
+    total_res[is.nan(total_res$roi),'roi'] <- 0
+    
+  }else if(mode=='SNM'){
+    total_res$roi = as.numeric(total_res$recall)/ as.numeric(total_res$pci)  
+    total_res[is.nan(total_res$roi),'roi'] <- 0
+    
+  }
+  total_res$roi2 = as.numeric(total_res$recall)/ (0.5*as.numeric(total_res$pii) + 0.5*as.numeric(total_res$pci))
+  total_res[is.nan(total_res$roi2),'roi2'] <- 0
+  total_res$roi3 = as.numeric(total_res$recall)/ sqrt(as.numeric(total_res$pii) * as.numeric(total_res$pci))
+  total_res[is.nan(total_res$roi3),'roi3'] <- 0
+  
+  return(total_res)
+}
 
 
