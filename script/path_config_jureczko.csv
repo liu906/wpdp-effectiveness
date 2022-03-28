@@ -6,7 +6,6 @@ train_path,test_path,diff_path
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.2.csv,./result/camel-1.0_camel-1.2_class.csv
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.2.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.4.csv,./result/camel-1.2_camel-1.4_class.csv
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.4.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/camel/camel_1.6.csv,./result/camel-1.4_camel-1.6_class.csv
-./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/forrest/forrest_0.6.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/forrest/forrest_0.7.csv,./result/forrest-0.6_forrest-0.7_class.csv
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/forrest/forrest_0.7.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/forrest/forrest_0.8.csv,./result/forrest-0.7_forrest-0.8_class.csv
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/jEdit/jEdit_3.2.1.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/jEdit/jEdit_4.csv,./result/jedit-3.2_jedit-4.0_class.csv
 ./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/jEdit/jEdit_4.csv,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/jEdit/jEdit_4.1.csv,./result/jedit-4.0_jedit-4.1_class.csv
