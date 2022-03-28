@@ -160,20 +160,46 @@ def newIsBuggy(train_data,test_data):
 def testDiffTrain(train_data, test_data, diff_data):
     if len(IDs) > 1:
         list_IDs_test = test_data[IDs].agg(' '.join, axis=1).values
+        list_IDs_train = train_data[IDs].agg(' '.join, axis=1).values
     else:
         list_IDs_test = test_data[IDs[0]].values
+        list_IDs_train = train_data[IDs[0]].values
+
+
     list_IDs_test = [item.replace('$', '.') for item in list_IDs_test]
+    list_IDs_train = [item.replace('$', '.') for item in list_IDs_train]
+
     df_same_modules = diff_data.loc[diff_data['isSame'] == True]
     list_same_id = df_same_modules['old'].tolist()
+    list_same_id_in_dataset = set(list_same_id).intersection(set(list_IDs_test)).intersection(set(list_IDs_train))
+
+
     same_id_index_test = []
+    tp, tn, fp, fn = 0, 0, 0, 0
+    # tp: buggy in old,buggy in new
+    # fp: clean in old,buggy in new. clean module change to buggy in new version, while code is the same
+    # tn: clean in old,clean in new
+    # fn: buggy in old,clean in new. buggy module change to clean in new version, while code is the same
 
     for idx, j in enumerate(list_IDs_test):
-        for id in list_same_id:
+        for id in list_same_id_in_dataset:
             if id == j:
                 same_id_index_test.append(idx)
+                train_label = train_data.loc[train_data[IDs[-1]] == j,LABEL].values
+                test_label = test_data.loc[idx, LABEL].values
+                if (train_label and test_label):
+                    tp = tp + 1
+                elif train_label == False and test_label == False:
+                    tn = tn + 1
+                elif train_label == True and test_label == False:
+                    fn = fn + 1
+                else:
+                    fp = fp + 1
+    print(tp, fp, tn, fn)
+
     not_same_index_test = list(set([item for item in range(test_data.shape[0])]) - set(same_id_index_test))
     test_data_without_dup = test_data.iloc[not_same_index_test]
-    return test_data_without_dup
+    return test_data_without_dup, len(list_same_id), len(list_same_id_in_dataset), tp, fp, tn, fn
 
 
 def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_info):
@@ -200,20 +226,21 @@ def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_i
         train_data = pd.read_csv(train_path)
         test_data = pd.read_csv(test_path)
         diff_data = pd.read_csv(diff_path)
-        test_data_without_dup = testDiffTrain(train_data, test_data, diff_data)
+        test_data_without_dup,len_list_same_id, len_list_same_id_in_dataset, tp, fp, tn, fn = testDiffTrain(train_data, test_data, diff_data)
         Path("./data_new").mkdir(parents=True, exist_ok=True)
 
         test_path_diffToPreviousRelease = './data_new/'+'diffToPreviousRelease_'+test_path.split('/')[-1]
-        test_data_without_dup.to_csv(test_path_diffToPreviousRelease,index=False)
+        test_data_without_dup.to_csv(test_path_diffToPreviousRelease, index=False)
 
         list_path_config_diffData.append([train_path, test_path_diffToPreviousRelease])
 
-        res_list.append([train_path, test_path, test_data.shape[0], test_data_without_dup.shape[0]])
+        res_list.append(
+            [train_path, test_path, test_data.shape[0], len_list_same_id, len_list_same_id_in_dataset, tp, fp, tn, fn])
 
-
-    res_df = pd.DataFrame(res_list, columns=['train_path', 'test_path', 'nrow_test_data', 'nrow_test_data_without_dup'])
+    res_df = pd.DataFrame(res_list, columns=['train_path', 'test_path', 'nrow_test_data', 'len_same_id_in_source_code',
+                                             'len_same_id_in_dataset', 'tp', 'fp', 'tn', 'fn'])
     res_df.to_csv(dataset_diff_info, index=False)
-    df_path_config_diffData = pd.DataFrame(list_path_config_diffData,columns=['train_path', 'test_path'])
+    df_path_config_diffData = pd.DataFrame(list_path_config_diffData, columns=['train_path', 'test_path'])
     df_path_config_diffData.to_csv(config_path_diffToPreviousRelease, index=False)
 
 
@@ -222,6 +249,7 @@ def test():
     config_path_diffToPreviousRelease = './script/path_config_jureczko_diffToPreviousRelease.csv'
     dataset_diff_info = './result/jureczko_diff_info.csv'
     get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_info)
+
 
 def run_model_by_config_path(data_split_config_path,data_set_column_config,dataset,modelName):
     df_config = pd.read_csv(data_split_config_path)
@@ -247,27 +275,28 @@ def run_model_by_config_path(data_split_config_path,data_set_column_config,datas
         prediction_result_path = './prediction_result/'+modelName+'/'+resFolder + '/'
         res_file_name = train_path.split('/')[-1] + '_' + test_path.split('/')[-1]
         prediction_result_df.to_csv(prediction_result_path + res_file_name, index=False)
+
 def run():
-    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-    #                          data_set_column_config='./script/dataset_column_config.csv',
-    #                          dataset='jureczko',
-    #                          modelName='LR')
-    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-    #                          data_set_column_config='./script/dataset_column_config.csv',
-    #                          dataset='jureczko',
-    #                          modelName='KNN10')
-    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-    #                          data_set_column_config='./script/dataset_column_config.csv',
-    #                          dataset='jureczko',
-    #                          modelName='KNN5')
-    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-    #                          data_set_column_config='./script/dataset_column_config.csv',
-    #                          dataset='jureczko',
-    #                          modelName='KNN1')
-    # run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-    #                          data_set_column_config='./script/dataset_column_config.csv',
-    #                          dataset='jureczko',
-    #                          modelName='KNN3')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='LR')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN10')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN5')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN1')
+    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                             data_set_column_config='./script/dataset_column_config.csv',
+                             dataset='jureczko',
+                             modelName='KNN3')
 
     run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
                          data_set_column_config='./script/dataset_column_config.csv',
@@ -291,7 +320,9 @@ def run():
                              modelName='KNN10')
 
 if __name__ == '__main__':
+    # test()
     run()
+
 
     # parser = argparse.ArgumentParser(
     #     description="use this file to train and test defect prediction model")
