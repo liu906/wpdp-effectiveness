@@ -2,11 +2,13 @@ import sys
 import os
 import pandas as pd
 
-sys.path.append('/home/lau/software/scitools/bin/linux64/Python')  # 设置PYTHONPATH
+#sys.path.append('/root/scitools/bin/linux64/Python') # 设置PYTHONPATH
 import understand
 import argparse
+print('sciTool Understand version: ', understand.version())
 
 def compareFile(old_db, new_db):
+    #TODO: check function of compare file
     res = pd.DataFrame(columns=['old', 'new', 'isSame'])
     old_modules = old_db.ents("file ~unknown ~unresolved")
     new_modules = new_db.ents("file ~unknown ~unresolved")

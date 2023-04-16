@@ -62,26 +62,28 @@ pipe_KNN10ns = make_pipeline(
     KNeighborsClassifier(n_neighbors=10)
 )
 
-pipe_SVC_diffTrainData = make_pipeline(
-    StandardScaler(),
-    SVC
-)
-pipe_KNN1_diffTrainData = make_pipeline(
-    StandardScaler(),
-    KNeighborsClassifier(n_neighbors=1)
-)
-pipe_KNN3_diffTrainData = make_pipeline(
-    StandardScaler(),
-    KNeighborsClassifier(n_neighbors=3)
-)
-pipe_KNN5_diffTrainData = make_pipeline(
-    StandardScaler(),
-    KNeighborsClassifier(n_neighbors=5)
-)
-pipe_KNN10_diffTrainData = make_pipeline(
-    StandardScaler(),
-    KNeighborsClassifier(n_neighbors=10)
-)
+
+
+# pipe_SVC_diffTrainData = make_pipeline(
+#     StandardScaler(),
+#     SVC
+# )
+# pipe_KNN1_diffTrainData = make_pipeline(
+#     StandardScaler(),
+#     KNeighborsClassifier(n_neighbors=1)
+# )
+# pipe_KNN3_diffTrainData = make_pipeline(
+#     StandardScaler(),
+#     KNeighborsClassifier(n_neighbors=3)
+# )
+# pipe_KNN5_diffTrainData = make_pipeline(
+#     StandardScaler(),
+#     KNeighborsClassifier(n_neighbors=5)
+# )
+# pipe_KNN10_diffTrainData = make_pipeline(
+#     StandardScaler(),
+#     KNeighborsClassifier(n_neighbors=10)
+# )
 
 LABEL = ["defective"]
 DROPS = ["Project", "Class", "bugs"]
@@ -96,11 +98,11 @@ model_dict = {'LR': pipe_LR,
               'KNN4': pipe_KNN4, 'KNN4ns': pipe_KNN4ns,
               'KNN5': pipe_KNN5, 'KNN5ns': pipe_KNN5ns,
               'KNN10': pipe_KNN10, 'KNN10ns': pipe_KNN10ns,
-              'SVC_diff': pipe_SVC_diffTrainData,
-              'KNN1_diff': pipe_KNN1_diffTrainData,
-              'KNN3_diff': pipe_KNN3_diffTrainData,
-              'KNN5_diff': pipe_KNN5_diffTrainData,
-              'KNN10_diff': pipe_KNN10_diffTrainData,
+              # 'SVC_diff': pipe_SVC_diffTrainData,
+              # 'KNN1_diff': pipe_KNN1_diffTrainData,
+              # 'KNN3_diff': pipe_KNN3_diffTrainData,
+              # 'KNN5_diff': pipe_KNN5_diffTrainData,
+              # 'KNN10_diff': pipe_KNN10_diffTrainData,
               }
 
 
@@ -277,85 +279,58 @@ def run_model_by_config_path(data_split_config_path,data_set_column_config,datas
         prediction_result_df.to_csv(prediction_result_path + res_file_name, index=False)
 
 def run():
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='LR')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN10')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN5')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN1')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN3')
+    modelNames = ['LR', 'KNN10', 'KNN5', 'KNN3', 'KNN1']
+    for modelName in modelNames:
+        run_model_by_config_path(data_split_config_path='./script/path_config_jureczko_diffToPreviousRelease.csv',
+                                 data_set_column_config='./script/dataset_column_config.csv',
+                                 dataset='jureczko',
+                                 modelName=modelName)
 
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
-                         data_set_column_config='./script/dataset_column_config.csv',
-                         dataset='jureczko',
-                         modelName='LR')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN1')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN3')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN5')
-    run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
-                             data_set_column_config='./script/dataset_column_config.csv',
-                             dataset='jureczko',
-                             modelName='KNN10')
+        run_model_by_config_path(data_split_config_path='./script/path_config_jureczko.csv',
+                                 data_set_column_config='./script/dataset_column_config.csv',
+                                 dataset='jureczko',
+                                 modelName=modelName)
 
+flat_test = False
+flag_run_all = True
 if __name__ == '__main__':
-    # test()
-    run()
+    if flat_test:
+        test()
+
+    if flag_run_all:
+        run()
+    else:
+        parser = argparse.ArgumentParser(
+            description="use this file to train and test defect prediction model")
+
+        parser.add_argument("train_file_path")
+        parser.add_argument("test_file_path")
+        parser.add_argument("--result-path", default="prediction_results")
+        parser.add_argument("--label")
+        parser.add_argument("--drops")
+        parser.add_argument("--sloc")
+        parser.add_argument("--ids")
+        parser.add_argument("--model")
+
+        args = parser.parse_args()
+        model = args.model
+        LABEL = [args.label]
+        DROPS = args.drops.split()
+        SLOC = [args.sloc]
+        IDs = args.ids.split()
+
+        print("Loading data...")
+        train_data = pd.read_csv(args.train_file_path)
+        test_data = pd.read_csv(args.test_file_path)
+
+        if not os.path.exists(args.result_path):
+            Path(args.result_path).mkdir(parents=True, exist_ok=True)
 
 
-    # parser = argparse.ArgumentParser(
-    #     description="use this file to train and test defect prediction model")
-    #
-    # parser.add_argument("train_file_path")
-    # parser.add_argument("test_file_path")
-    # parser.add_argument("--result-path", default="prediction_results")
-    # parser.add_argument("--label")
-    # parser.add_argument("--drops")
-    # parser.add_argument("--sloc")
-    # parser.add_argument("--ids")
-    # parser.add_argument("--model")
-    #
-    # args = parser.parse_args()
-    # model = args.model
-    # LABEL = [args.label]
-    # DROPS = args.drops.split()
-    # SLOC = [args.sloc]
-    # IDs = args.ids.split()
-    #
-    # print("Loading data...")
-    # train_data = pd.read_csv(args.train_file_path)
-    # test_data = pd.read_csv(args.test_file_path)
-    #
-    # if not os.path.exists(args.result_path):
-    #     Path(args.result_path).mkdir(parents=True, exist_ok=True)
-    #
-    #
-    #
-    # if(sum(train_data[LABEL].values)==0):
-    #     print('cannot train the prediction model because no buggy instance in training file')
-    # else:
-    #     df = normal_prediction(train_data, test_data, model)
-    #     result_path = os.path.join(args.result_path, args.train_file_path.split('/')[-1] + '_' +
-    #                                args.test_file_path.split('/')[-1] + '.csv')
-    #     df.to_csv(result_path, index=False)
+        if(sum(train_data[LABEL].values)==0):
+            print('cannot train the prediction model because no buggy instance in training file')
+        else:
+            df = normal_prediction(train_data, test_data, model)
+            result_path = os.path.join(args.result_path, args.train_file_path.split('/')[-1] + '_' +
+                                       args.test_file_path.split('/')[-1] + '.csv')
+            df.to_csv(result_path, index=False)

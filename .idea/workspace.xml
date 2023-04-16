@@ -1,47 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7e16551c-7fb4-4278-8708-3d58a6151c41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cross-version.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/BugDet-master/.idea/BugDet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jEdit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jEdit.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/LatestVersion/LatestVersion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/MacOSX/MacOSX.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cross-version-instance-overlap/JURECZKO/source_code/jEdit/jedit4.3source/jEdit/jars/QuickNotepad/QuickNotepad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/dataset_column_config.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/docs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-complete.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-dist.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-rake-plugin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-stdlib.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-HA-2019/jruby/jruby/jruby-1.7.0.preview1/man.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/docs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-complete.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-dist.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-rake-plugin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby-stdlib.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/jruby.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/JIRA-RA-2019/jruby/jruby/jruby-1.7.0.preview1/man.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jEdit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jEdit.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/LatestVersion/LatestVersion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/MacOSX/MacOSX.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udb/Metrics-Repo-2010/jedit/jedit/jedit-4.3/jars/QuickNotepad/QuickNotepad.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cross-version.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cross-version.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cross-version-instance-overlap/BugDet-master/.idea/BugDet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cross-version-instance-overlap/BugDet-master/.idea/BugDet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_jureczko_overlap_information.sh" beforeDir="false" afterPath="$PROJECT_DIR$/get_jureczko_overlap_information.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pureCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/pureCompare.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,26 +42,29 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2604q2oNqxGpwiZ4xeNb32A1Yiz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/script/cpdp_KNN10.bat" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/cpdp-effectiveness&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main without parameter">
+  <component name="RunManager" selected="Python.pureCompare">
     <configuration name="compare" type="PythonConfigurationType" factoryName="Python">
       <module name="cross-version" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,9 +72,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compare.py" />
@@ -120,13 +93,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv  ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
+      <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -141,9 +114,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -162,13 +135,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pureCompare.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="ant-ivy-1.4.1.udb ant-ivy-2.0.0.udb ant-ivy-1.4.1 ant-ivy-2.0.0 file" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -206,18 +179,34 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in main.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/main.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.compare" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main without parameter" />
-      <item itemvalue="Python.compare" />
       <item itemvalue="Python.pureCompare" />
+      <item itemvalue="Python tests.Python tests in main.py" />
       <item itemvalue="Shell Script.cpdp_KNN10" />
       <item itemvalue="Shell Script.cpdp_KNN10.sh" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.cpdp_KNN10.sh" />
         <item itemvalue="Python.pureCompare" />
+        <item itemvalue="Python tests.Python tests in main.py" />
+        <item itemvalue="Shell Script.cpdp_KNN10.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -232,53 +221,41 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pureCompare.py</url>
-          <line>55</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pureCompare.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>269</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pureCompare.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="22" />
+          <line>120</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pureCompare.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="23" />
+          <line>161</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>127</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>175</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>174</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>238</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/pureCompare.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
