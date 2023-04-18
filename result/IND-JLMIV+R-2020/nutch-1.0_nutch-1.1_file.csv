@@ -1,0 +1,801 @@
+old,new,isSame
+Program Files\SciTools\conf\understand\ada\ada95\a-lfwtio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-lfwtio.ads,True
+src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageQueryFilter.java,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageQueryFilter.java,True
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\DummySSLProtocolSocketFactory.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\DummySSLProtocolSocketFactory.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-strmap.ads,Program Files\SciTools\conf\understand\ada\ada95\a-strmap.ads,True
+src\plugin\subcollection\src\java\org\apache\nutch\collection\CollectionManager.java,src\plugin\subcollection\src\java\org\apache\nutch\collection\CollectionManager.java,False
+src\plugin\parse-pdf\src\test\org\apache\nutch\parse\pdf\TestPdfParser.java,src\plugin\parse-pdf\src\test\org\apache\nutch\parse\pdf\TestPdfParser.java,True
+src\java\org\apache\nutch\parse\ParserNotFound.java,src\java\org\apache\nutch\parse\ParserNotFound.java,True
+src\java\org\apache\nutch\indexer\lucene\LuceneConstants.java,src\java\org\apache\nutch\indexer\lucene\LuceneConstants.java,True
+src\test\org\apache\nutch\plugin\SimpleTestPlugin.java,src\test\org\apache\nutch\plugin\SimpleTestPlugin.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\XMLCharacterRecognizer.java,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\XMLCharacterRecognizer.java,True
+src\java\org\apache\nutch\net\URLFilterChecker.java,src\java\org\apache\nutch\net\URLFilterChecker.java,True
+src\java\org\apache\nutch\searcher\response\SearchResults.java,src\java\org\apache\nutch\searcher\response\SearchResults.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ioexce.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ioexce.ads,True
+src\java\org\apache\nutch\scoring\webgraph\NodeReader.java,src\java\org\apache\nutch\scoring\webgraph\NodeReader.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tcmasp.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tcmasp.ads,True
+src\test\org\apache\nutch\crawl\TestLinkDbMerger.java,src\test\org\apache\nutch\crawl\TestLinkDbMerger.java,True
+src\plugin\analysis-fr\src\java\org\apache\nutch\analysis\fr\FrenchAnalyzer.java,src\plugin\analysis-fr\src\java\org\apache\nutch\analysis\fr\FrenchAnalyzer.java,False
+src\plugin\parse-oo\src\test\org\apache\nutch\parse\oo\TestOOParser.java,src\plugin\parse-oo\src\test\org\apache\nutch\parse\oo\TestOOParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-fortra.ads,Program Files\SciTools\conf\understand\ada\ada95\i-fortra.ads,True
+src\plugin\urlfilter-regex\src\test\org\apache\nutch\urlfilter\regex\TestRegexURLFilter.java,src\plugin\urlfilter-regex\src\test\org\apache\nutch\urlfilter\regex\TestRegexURLFilter.java,True
+src\test\org\apache\nutch\ontology\TestOntologyFactory.java,src\test\org\apache\nutch\ontology\TestOntologyFactory.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpResponse.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpResponse.java,True
+src\java\org\apache\nutch\parse\ParseData.java,src\java\org\apache\nutch\parse\ParseData.java,False
+src\java\org\apache\nutch\protocol\ProtocolFactory.java,src\java\org\apache\nutch\protocol\ProtocolFactory.java,True
+src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileException.java,src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-comopt.ads,Program Files\SciTools\conf\understand\ada\ada95\s-comopt.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-cwila1.ads,Program Files\SciTools\conf\understand\ada\ada95\a-cwila1.ads,True
+src\java\org\apache\nutch\searcher\LuceneQueryOptimizer.java,src\java\org\apache\nutch\searcher\LuceneQueryOptimizer.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-imgllb.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgllb.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cporte.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cporte.ads,True
+src\java\org\apache\nutch\util\LockUtil.java,src\java\org\apache\nutch\util\LockUtil.java,True
+src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestLanguageIdentifier.java,src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestLanguageIdentifier.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-reatim.ads,Program Files\SciTools\conf\understand\ada\ada95\a-reatim.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-chlat1.ads,Program Files\SciTools\conf\understand\ada\ada95\a-chlat1.ads,True
+src\java\org\apache\nutch\scoring\webgraph\LinkDumper.java,src\java\org\apache\nutch\scoring\webgraph\LinkDumper.java,True
+src\java\org\apache\nutch\protocol\Protocol.java,src\java\org\apache\nutch\protocol\Protocol.java,True
+src\plugin\feed\src\test\org\apache\nutch\parse\feed\TestFeedParser.java,src\plugin\feed\src\test\org\apache\nutch\parse\feed\TestFeedParser.java,True
+src\java\org\apache\nutch\util\EncodingDetector.java,src\java\org\apache\nutch\util\EncodingDetector.java,True
+src\java\org\apache\nutch\plugin\CircularDependencyException.java,src\java\org\apache\nutch\plugin\CircularDependencyException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-lliwti.ads,Program Files\SciTools\conf\understand\ada\ada95\a-lliwti.ads,True
+src\java\org\apache\nutch\servlet\Cached.java,src\java\org\apache\nutch\servlet\Cached.java,True
+src\java\org\apache\nutch\searcher\LuceneSearchBean.java,src\java\org\apache\nutch\searcher\LuceneSearchBean.java,False
+Program Files\SciTools\conf\understand\ada\ada95\i-pacdec.ads,Program Files\SciTools\conf\understand\ada\ada95\i-pacdec.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-llfwti.ads,Program Files\SciTools\conf\understand\ada\ada95\a-llfwti.ads,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\PasswordProtectedException.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\PasswordProtectedException.java,True
+src\test\org\apache\nutch\metadata\TestMetadata.java,src\test\org\apache\nutch\metadata\TestMetadata.java,True
+src\plugin\lib-regex-filter\src\java\org\apache\nutch\urlfilter\api\RegexRule.java,src\plugin\lib-regex-filter\src\java\org\apache\nutch\urlfilter\api\RegexRule.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-stwima.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stwima.ads,True
+src\test\org\apache\nutch\searcher\TestOpenSearchServlet.java,src\test\org\apache\nutch\searcher\TestOpenSearchServlet.java,True
+src\java\org\apache\nutch\searcher\IndexSearcher.java,src\java\org\apache\nutch\searcher\IndexSearcher.java,False
+src\plugin\parse-oo\src\test\org\apache\nutch\parse\oo\TestOOParser.java,src\plugin\parse-tika\src\test\org\apache\nutch\tika\TestOOParser.java,False
+src\plugin\parse-swf\src\test\org\apache\nutch\parse\swf\TestSWFParser.java,src\plugin\parse-swf\src\test\org\apache\nutch\parse\swf\TestSWFParser.java,True
+src\plugin\parse-pdf\src\java\org\apache\nutch\parse\pdf\PdfParser.java,src\plugin\parse-pdf\src\java\org\apache\nutch\parse\pdf\PdfParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nucoty.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nucoty.ads,True
+src\java\org\apache\nutch\searcher\DistributedSegmentBean.java,src\java\org\apache\nutch\searcher\DistributedSegmentBean.java,True
+src\plugin\query-basic\src\java\org\apache\nutch\searcher\basic\BasicQueryFilter.java,src\plugin\query-basic\src\java\org\apache\nutch\searcher\basic\BasicQueryFilter.java,True
+src\java\org\apache\nutch\plugin\MissingDependencyException.java,src\java\org\apache\nutch\plugin\MissingDependencyException.java,True
+src\java\org\apache\nutch\indexer\field\FieldFilters.java,src\java\org\apache\nutch\indexer\field\FieldFilters.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expssi.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expssi.ads,True
+src\java\org\apache\nutch\tools\DmozParser.java,src\java\org\apache\nutch\tools\DmozParser.java,True
+src\plugin\scoring-opic\src\java\org\apache\nutch\scoring\opic\OPICScoringFilter.java,src\plugin\scoring-opic\src\java\org\apache\nutch\scoring\opic\OPICScoringFilter.java,True
+src\java\org\apache\nutch\parse\ParserFactory.java,src\java\org\apache\nutch\parse\ParserFactory.java,False
+src\java\org\apache\nutch\protocol\EmptyRobotRules.java,src\java\org\apache\nutch\protocol\EmptyRobotRules.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-except.ads,Program Files\SciTools\conf\understand\ada\ada95\a-except.ads,True
+src\java\org\apache\nutch\analysis\CommonGrams.java,src\java\org\apache\nutch\analysis\CommonGrams.java,False
+src\plugin\query-more\src\java\org\apache\nutch\searcher\more\TypeQueryFilter.java,src\plugin\query-more\src\java\org\apache\nutch\searcher\more\TypeQueryFilter.java,True
+src\java\org\apache\nutch\indexer\NutchDocument.java,src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\NutchDocument.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-strops.ads,Program Files\SciTools\conf\understand\ada\ada95\s-strops.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-pooemp.ads,Program Files\SciTools\conf\understand\ada\ada95\s-pooemp.ads,True
+src\plugin\analysis-de\src\java\org\apache\nutch\analysis\de\GermanAnalyzer.java,src\plugin\analysis-de\src\java\org\apache\nutch\analysis\de\GermanAnalyzer.java,False
+src\plugin\subcollection\src\java\org\apache\nutch\collection\Subcollection.java,src\plugin\subcollection\src\java\org\apache\nutch\collection\Subcollection.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-explin.ads,Program Files\SciTools\conf\understand\ada\ada95\s-explin.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgcha.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgcha.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\directio.ads,Program Files\SciTools\conf\understand\ada\ada95\directio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\sequenio.ads,Program Files\SciTools\conf\understand\ada\ada95\sequenio.ads,True
+src\java\org\apache\nutch\crawl\Signature.java,src\java\org\apache\nutch\crawl\Signature.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-tasatt.ads,Program Files\SciTools\conf\understand\ada\ada95\a-tasatt.ads,True
+src\test\org\apache\nutch\util\TestPrefixStringMatcher.java,src\test\org\apache\nutch\util\TestPrefixStringMatcher.java,True
+src\java\org\apache\nutch\parse\ParseText.java,src\java\org\apache\nutch\parse\ParseText.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-tasclo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasclo.ads,True
+src\java\org\apache\nutch\indexer\field\BasicFields.java,src\java\org\apache\nutch\indexer\field\BasicFields.java,True
+src\plugin\parse-html\src\test\org\apache\nutch\parse\html\TestDOMContentUtils.java,src\plugin\parse-html\src\test\org\apache\nutch\parse\html\TestDOMContentUtils.java,True
+src\java\org\apache\nutch\util\SuffixStringMatcher.java,src\java\org\apache\nutch\util\SuffixStringMatcher.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fatflt.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fatflt.ads,True
+src\java\org\apache\nutch\crawl\CrawlDbReducer.java,src\java\org\apache\nutch\crawl\CrawlDbReducer.java,False
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\Slide.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\Slide.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-swmwco.ads,Program Files\SciTools\conf\understand\ada\ada95\a-swmwco.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fatsfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fatsfl.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-rpc.ads,Program Files\SciTools\conf\understand\ada\ada95\s-rpc.ads,True
+src\plugin\field-basic\src\java\org\apache\nutch\indexer\field\basic\BasicFieldFilter.java,src\plugin\field-basic\src\java\org\apache\nutch\indexer\field\basic\BasicFieldFilter.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-witeio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-witeio.ads,True
+src\java\org\apache\nutch\crawl\LinkDbMerger.java,src\java\org\apache\nutch\crawl\LinkDbMerger.java,True
+src\java\org\apache\nutch\searcher\RPCSegmentBean.java,src\java\org\apache\nutch\searcher\RPCSegmentBean.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valboo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valboo.ads,True
+src\java\org\apache\nutch\searcher\response\ResponseWriters.java,src\java\org\apache\nutch\searcher\response\ResponseWriters.java,True
+src\plugin\urlnormalizer-basic\src\java\org\apache\nutch\net\urlnormalizer\basic\BasicURLNormalizer.java,src\plugin\urlnormalizer-basic\src\java\org\apache\nutch\net\urlnormalizer\basic\BasicURLNormalizer.java,True
+src\java\org\apache\nutch\searcher\QueryException.java,src\java\org\apache\nutch\searcher\QueryException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-strunb.ads,Program Files\SciTools\conf\understand\ada\ada95\a-strunb.ads,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\ContentReaderListener.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\ContentReaderListener.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-stopoo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-stopoo.ads,True
+src\java\org\apache\nutch\segment\SegmentReader.java,src\java\org\apache\nutch\segment\SegmentReader.java,True
+src\java\org\apache\nutch\net\URLFilters.java,src\java\org\apache\nutch\net\URLFilters.java,True
+src\test\org\apache\nutch\net\TestURLNormalizers.java,src\test\org\apache\nutch\net\TestURLNormalizers.java,True
+src\plugin\parse-ext\src\test\org\apache\nutch\parse\ext\TestExtParser.java,src\plugin\parse-ext\src\test\org\apache\nutch\parse\ext\TestExtParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expuns.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expuns.ads,True
+src\java\org\apache\nutch\util\StringUtil.java,src\java\org\apache\nutch\util\StringUtil.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-errrep.ads,Program Files\SciTools\conf\understand\ada\ada95\s-errrep.ads,True
+src\java\org\apache\nutch\segment\SegmentPart.java,src\java\org\apache\nutch\segment\SegmentPart.java,True
+src\java\org\apache\nutch\indexer\IndexMerger.java,src\java\org\apache\nutch\indexer\IndexMerger.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-widboo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widboo.ads,True
+src\plugin\urlfilter-automaton\src\java\org\apache\nutch\urlfilter\automaton\AutomatonURLFilter.java,src\plugin\urlfilter-automaton\src\java\org\apache\nutch\urlfilter\automaton\AutomatonURLFilter.java,True
+src\java\org\apache\nutch\indexer\solr\SolrDeleteDuplicates.java,src\java\org\apache\nutch\indexer\solr\SolrDeleteDuplicates.java,False
+src\java\org\apache\nutch\scoring\webgraph\Loops.java,src\java\org\apache\nutch\scoring\webgraph\Loops.java,True
+src\plugin\parse-msexcel\src\java\org\apache\nutch\parse\msexcel\MSExcelParser.java,src\plugin\parse-msexcel\src\java\org\apache\nutch\parse\msexcel\MSExcelParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-widenu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widenu.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-io.ads,Program Files\SciTools\conf\understand\ada\ada95\s-io.ads,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordExtractor.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordExtractor.java,True
+src\plugin\urlfilter-suffix\src\test\org\apache\nutch\urlfilter\suffix\TestSuffixURLFilter.java,src\plugin\urlfilter-suffix\src\test\org\apache\nutch\urlfilter\suffix\TestSuffixURLFilter.java,True
+src\test\org\apache\nutch\searcher\TestSummarizerFactory.java,src\test\org\apache\nutch\searcher\TestSummarizerFactory.java,True
+src\plugin\urlnormalizer-pass\src\test\org\apache\nutch\net\urlnormalizer\pass\TestPassURLNormalizer.java,src\plugin\urlnormalizer-pass\src\test\org\apache\nutch\net\urlnormalizer\pass\TestPassURLNormalizer.java,True
+src\java\org\apache\nutch\analysis\NutchAnalysis.java,src\java\org\apache\nutch\analysis\NutchAnalysis.java,False
+src\plugin\urlfilter-prefix\src\java\org\apache\nutch\urlfilter\prefix\PrefixURLFilter.java,src\plugin\urlfilter-prefix\src\java\org\apache\nutch\urlfilter\prefix\PrefixURLFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valenu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valenu.ads,True
+src\java\org\apache\nutch\searcher\Hits.java,src\java\org\apache\nutch\searcher\Hits.java,True
+src\java\org\apache\nutch\crawl\AbstractFetchSchedule.java,src\java\org\apache\nutch\crawl\AbstractFetchSchedule.java,False
+src\java\org\apache\nutch\fetcher\FetcherOutput.java,src\java\org\apache\nutch\fetcher\FetcherOutput.java,True
+src\test\org\apache\nutch\plugin\ITestExtension.java,src\test\org\apache\nutch\plugin\ITestExtension.java,True
+Program Files\SciTools\conf\understand\ada\ada95\system.ads,Program Files\SciTools\conf\understand\ada\ada95\system.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-witied.ads,Program Files\SciTools\conf\understand\ada\ada95\a-witied.ads,True
+src\java\org\apache\nutch\tools\arc\ArcSegmentCreator.java,src\java\org\apache\nutch\tools\arc\ArcSegmentCreator.java,True
+src\test\org\apache\nutch\parse\TestParserFactory.java,src\test\org\apache\nutch\parse\TestParserFactory.java,False
+Program Files\SciTools\conf\understand\ada\ada95\ioexcept.ads,Program Files\SciTools\conf\understand\ada\ada95\ioexcept.ads,True
+src\java\org\apache\nutch\indexer\NutchDocument.java,src\java\org\apache\nutch\indexer\NutchDocument.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMContentUtils.java,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMContentUtils.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-sfteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-sfteio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-explli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-explli.ads,True
+src\java\org\apache\nutch\metadata\Nutch.java,src\java\org\apache\nutch\metadata\Nutch.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imglld.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imglld.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgllw.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgllw.ads,True
+src\java\org\apache\nutch\plugin\Pluggable.java,src\java\org\apache\nutch\plugin\Pluggable.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-tioedt.ads,Program Files\SciTools\conf\understand\ada\ada95\a-tioedt.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fatlfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fatlfl.ads,True
+src\plugin\urlfilter-regex\src\java\org\apache\nutch\urlfilter\regex\RegexURLFilter.java,src\plugin\urlfilter-regex\src\java\org\apache\nutch\urlfilter\regex\RegexURLFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-taskin.ads,Program Files\SciTools\conf\understand\ada\ada95\s-taskin.ads,True
+src\plugin\index-basic\src\java\org\apache\nutch\indexer\basic\BasicIndexingFilter.java,src\plugin\index-basic\src\java\org\apache\nutch\indexer\basic\BasicIndexingFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-iwteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-iwteio.ads,True
+src\java\org\apache\nutch\searcher\SummarizerFactory.java,src\java\org\apache\nutch\searcher\SummarizerFactory.java,True
+Program Files\SciTools\conf\understand\ada\ada95\interfac.ads,Program Files\SciTools\conf\understand\ada\ada95\interfac.ads,True
+src\plugin\protocol-file\src\test\org\apache\nutch\protocol\file\TestProtocolFile.java,src\plugin\protocol-file\src\test\org\apache\nutch\protocol\file\TestProtocolFile.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tastal.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tastal.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fatllf.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fatllf.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-widcha.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widcha.ads,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordTextBuffer.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordTextBuffer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\g-hesora.ads,Program Files\SciTools\conf\understand\ada\ada95\g-hesora.ads,True
+src\test\org\apache\nutch\crawl\DummyWritable.java,src\test\org\apache\nutch\crawl\DummyWritable.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fatgen.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fatgen.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-storio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-storio.ads,True
+src\test\org\apache\nutch\protocol\TestProtocolFactory.java,src\test\org\apache\nutch\protocol\TestProtocolFactory.java,True
+src\test\org\apache\nutch\clustering\TestOnlineClustererFactory.java,src\test\org\apache\nutch\clustering\TestOnlineClustererFactory.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-sfwtio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-sfwtio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tasren.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasren.ads,True
+src\java\org\apache\nutch\util\URLUtil.java,src\java\org\apache\nutch\util\URLUtil.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tasabo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasabo.ads,True
+src\java\org\apache\nutch\protocol\ProtocolStatus.java,src\java\org\apache\nutch\protocol\ProtocolStatus.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-expflt.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expflt.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-numeri.ads,Program Files\SciTools\conf\understand\ada\ada95\a-numeri.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-strsea.ads,Program Files\SciTools\conf\understand\ada\ada95\a-strsea.ads,True
+src\java\org\apache\nutch\plugin\Plugin.java,src\java\org\apache\nutch\plugin\Plugin.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-powtab.ads,Program Files\SciTools\conf\understand\ada\ada95\s-powtab.ads,True
+src\plugin\parse-ext\src\java\org\apache\nutch\parse\ext\ExtParser.java,src\plugin\parse-ext\src\java\org\apache\nutch\parse\ext\ExtParser.java,True
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpBasicAuthentication.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpBasicAuthentication.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valuns.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valuns.ads,True
+src\java\org\apache\nutch\analysis\NutchDocumentAnalyzer.java,src\java\org\apache\nutch\analysis\NutchDocumentAnalyzer.java,False
+src\test\org\apache\nutch\util\TestGZIPUtils.java,src\test\org\apache\nutch\util\TestGZIPUtils.java,True
+src\java\org\apache\nutch\searcher\response\SearchServlet.java,src\java\org\apache\nutch\searcher\response\SearchServlet.java,True
+src\java\org\apache\nutch\util\NutchConfiguration.java,src\java\org\apache\nutch\util\NutchConfiguration.java,False
+src\test\org\apache\nutch\searcher\TestHitDetails.java,src\test\org\apache\nutch\searcher\TestHitDetails.java,True
+src\plugin\index-more\src\java\org\apache\nutch\indexer\more\MoreIndexingFilter.java,src\plugin\index-more\src\java\org\apache\nutch\indexer\more\MoreIndexingFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgwiu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgwiu.ads,True
+src\java\org\apache\nutch\util\NodeWalker.java,src\java\org\apache\nutch\util\NodeWalker.java,True
+src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\HitsClusterAdapter.java,src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\HitsClusterAdapter.java,True
+src\java\org\apache\nutch\crawl\AdaptiveFetchSchedule.java,src\java\org\apache\nutch\crawl\AdaptiveFetchSchedule.java,True
+src\java\org\apache\nutch\crawl\TextProfileSignature.java,src\java\org\apache\nutch\crawl\TextProfileSignature.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-secsta.ads,Program Files\SciTools\conf\understand\ada\ada95\s-secsta.ads,True
+src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\structs\RSSChannel.java,src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\structs\RSSChannel.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-wchwts.ads,Program Files\SciTools\conf\understand\ada\ada95\s-wchwts.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-retide.ads,Program Files\SciTools\conf\understand\ada\ada95\a-retide.ads,True
+src\java\org\apache\nutch\indexer\DeleteDuplicates.java,src\java\org\apache\nutch\indexer\DeleteDuplicates.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-taslib.ads,Program Files\SciTools\conf\understand\ada\ada95\s-taslib.ads,True
+src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\NutchInputComponent.java,src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\NutchInputComponent.java,True
+src\java\org\apache\nutch\tools\arc\ArcRecordReader.java,src\java\org\apache\nutch\tools\arc\ArcRecordReader.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-filaux.ads,Program Files\SciTools\conf\understand\ada\ada95\s-filaux.ads,True
+src\java\org\apache\nutch\plugin\PluginRepository.java,src\java\org\apache\nutch\plugin\PluginRepository.java,True
+src\java\org\apache\nutch\scoring\webgraph\LoopReader.java,src\java\org\apache\nutch\scoring\webgraph\LoopReader.java,True
+src\java\org\apache\nutch\metadata\Feed.java,src\java\org\apache\nutch\metadata\Feed.java,True
+src\java\org\apache\nutch\indexer\IndexSorter.java,src\java\org\apache\nutch\indexer\IndexSorter.java,False
+src\java\org\apache\nutch\segment\ContentAsTextInputFormat.java,src\java\org\apache\nutch\segment\ContentAsTextInputFormat.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expgen.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expgen.ads,True
+src\java\org\apache\nutch\util\domain\DomainSuffixes.java,src\java\org\apache\nutch\util\domain\DomainSuffixes.java,True
+src\test\org\apache\nutch\protocol\TestContent.java,src\test\org\apache\nutch\protocol\TestContent.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-vercon.ads,Program Files\SciTools\conf\understand\ada\ada95\s-vercon.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imglli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imglli.ads,True
+src\java\org\apache\nutch\util\domain\DomainStatistics.java,src\java\org\apache\nutch\util\domain\DomainStatistics.java,True
+src\plugin\query-custom\src\java\org\apache\nutch\searcher\custom\CustomFieldQueryFilter.java,src\plugin\query-custom\src\java\org\apache\nutch\searcher\custom\CustomFieldQueryFilter.java,True
+src\java\org\apache\nutch\searcher\HitDetailer.java,src\java\org\apache\nutch\searcher\HitDetailer.java,True
+src\java\org\apache\nutch\parse\ParseException.java,src\java\org\apache\nutch\parse\ParseException.java,True
+src\plugin\scoring-link\src\java\org\apache\nutch\scoring\link\LinkAnalysisScoringFilter.java,src\plugin\scoring-link\src\java\org\apache\nutch\scoring\link\LinkAnalysisScoringFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-liteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-liteio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-intnam.ads,Program Files\SciTools\conf\understand\ada\ada95\a-intnam.ads,True
+src\java\org\apache\nutch\indexer\NutchIndexWriterFactory.java,src\java\org\apache\nutch\indexer\NutchIndexWriterFactory.java,True
+src\java\org\apache\nutch\indexer\field\FieldIndexer.java,src\java\org\apache\nutch\indexer\field\FieldIndexer.java,False
+src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\BlockedException.java,src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\BlockedException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-strbou.ads,Program Files\SciTools\conf\understand\ada\ada95\a-strbou.ads,True
+src\test\org\apache\nutch\util\WritableTestUtils.java,src\test\org\apache\nutch\util\WritableTestUtils.java,True
+lib\native\Linux-i386-32\libhadoop.a,lib\native\Linux-i386-32\libhadoop.a,False
+Program Files\SciTools\conf\understand\ada\ada95\s-exnssi.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnssi.ads,True
+src\java\org\apache\nutch\crawl\FetchScheduleFactory.java,src\java\org\apache\nutch\crawl\FetchScheduleFactory.java,True
+src\java\org\apache\nutch\analysis\Token.java,src\java\org\apache\nutch\analysis\Token.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-wchjis.ads,Program Files\SciTools\conf\understand\ada\ada95\s-wchjis.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnsin.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnsin.ads,True
+src\java\org\apache\nutch\fetcher\FetcherOutputFormat.java,src\java\org\apache\nutch\fetcher\FetcherOutputFormat.java,True
+src\java\org\apache\nutch\analysis\FastCharStream.java,src\java\org\apache\nutch\analysis\FastCharStream.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nuflra.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nuflra.ads,True
+src\plugin\urlfilter-domain\src\test\org\apache\nutch\urlfilter\domain\TestDomainURLFilter.java,src\plugin\urlfilter-domain\src\test\org\apache\nutch\urlfilter\domain\TestDomainURLFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tatise.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tatise.ads,True
+src\java\org\apache\nutch\analysis\AnalyzerFactory.java,src\java\org\apache\nutch\analysis\AnalyzerFactory.java,True
+src\plugin\protocol-httpclient\src\test\org\apache\nutch\protocol\httpclient\TestProtocolHttpClient.java,src\plugin\protocol-httpclient\src\test\org\apache\nutch\protocol\httpclient\TestProtocolHttpClient.java,False
+src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCQueryFilter.java,src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-flteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-flteio.ads,True
+src\java\org\apache\nutch\indexer\NutchSimilarity.java,src\java\org\apache\nutch\indexer\NutchSimilarity.java,True
+src\plugin\urlfilter-suffix\src\java\org\apache\nutch\urlfilter\suffix\SuffixURLFilter.java,src\plugin\urlfilter-suffix\src\java\org\apache\nutch\urlfilter\suffix\SuffixURLFilter.java,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\TextBox.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\TextBox.java,True
+src\java\org\apache\nutch\scoring\ScoringFilter.java,src\java\org\apache\nutch\scoring\ScoringFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valcha.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valcha.ads,True
+src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestHTMLLanguageParser.java,src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestHTMLLanguageParser.java,False
+src\java\org\apache\nutch\scoring\ScoringFilterException.java,src\java\org\apache\nutch\scoring\ScoringFilterException.java,True
+src\java\org\apache\nutch\indexer\FsDirectory.java,src\java\org\apache\nutch\indexer\FsDirectory.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-tasoli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasoli.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-tags.ads,Program Files\SciTools\conf\understand\ada\ada95\a-tags.ads,True
+src\java\org\apache\nutch\searcher\Searcher.java,src\java\org\apache\nutch\searcher\Searcher.java,False
+src\java\org\apache\nutch\parse\ParseImpl.java,src\java\org\apache\nutch\parse\ParseImpl.java,True
+src\java\org\apache\nutch\net\protocols\Response.java,src\java\org\apache\nutch\net\protocols\Response.java,True
+src\java\org\apache\nutch\indexer\solr\SolrIndexer.java,src\java\org\apache\nutch\indexer\solr\SolrIndexer.java,False
+src\java\org\apache\nutch\metadata\SpellCheckedMetadata.java,src\java\org\apache\nutch\metadata\SpellCheckedMetadata.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMContentUtils.java,src\plugin\parse-tika\src\java\org\apache\nutch\parse\tika\DOMContentUtils.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-comexc.ads,Program Files\SciTools\conf\understand\ada\ada95\s-comexc.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-strequ.ads,Program Files\SciTools\conf\understand\ada\ada95\s-strequ.ads,True
+src\java\org\apache\nutch\searcher\HitSummarizer.java,src\java\org\apache\nutch\searcher\HitSummarizer.java,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\chp\Word6CHPBinTable.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\chp\Word6CHPBinTable.java,True
+src\java\org\apache\nutch\ontology\OntologyFactory.java,src\java\org\apache\nutch\ontology\OntologyFactory.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\HtmlParser.java,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\HtmlParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valllu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valllu.ads,True
+src\test\org\apache\nutch\analysis\TestAnalyzerFactory.java,src\test\org\apache\nutch\analysis\TestAnalyzerFactory.java,True
+src\java\org\apache\nutch\searcher\SolrSearchBean.java,src\java\org\apache\nutch\searcher\SolrSearchBean.java,False
+src\java\org\apache\nutch\parse\ParseUtil.java,src\java\org\apache\nutch\parse\ParseUtil.java,True
+src\java\org\apache\nutch\util\CommandRunner.java,src\java\org\apache\nutch\util\CommandRunner.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cpp.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cpp.ads,True
+src\test\org\apache\nutch\util\TestStringUtil.java,src\test\org\apache\nutch\util\TestStringUtil.java,True
+src\java\org\apache\nutch\indexer\field\AnchorFields.java,src\java\org\apache\nutch\indexer\field\AnchorFields.java,True
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthenticationFactory.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthenticationFactory.java,True
+src\plugin\query-url\src\test\org\apache\nutch\searcher\url\TestURLQueryFilter.java,src\plugin\query-url\src\test\org\apache\nutch\searcher\url\TestURLQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-numran.ads,Program Files\SciTools\conf\understand\ada\ada95\a-numran.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgrea.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgrea.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-stalib.ads,Program Files\SciTools\conf\understand\ada\ada95\s-stalib.ads,True
+src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestNGramProfile.java,src\plugin\languageidentifier\src\test\org\apache\nutch\analysis\lang\TestNGramProfile.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-interr.ads,Program Files\SciTools\conf\understand\ada\ada95\a-interr.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valuti.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valuti.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-lfteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-lfteio.ads,True
+src\plugin\lib-regex-filter\src\java\org\apache\nutch\urlfilter\api\RegexURLFilterBase.java,src\plugin\lib-regex-filter\src\java\org\apache\nutch\urlfilter\api\RegexURLFilterBase.java,True
+src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\HttpException.java,src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\HttpException.java,True
+src\java\org\apache\nutch\crawl\LinkDbFilter.java,src\java\org\apache\nutch\crawl\LinkDbFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-atacco.ads,Program Files\SciTools\conf\understand\ada\ada95\s-atacco.ads,True
+src\test\org\apache\nutch\crawl\CrawlDBTestUtil.java,src\test\org\apache\nutch\crawl\CrawlDBTestUtil.java,False
+src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\structs\RSSItem.java,src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\structs\RSSItem.java,True
+src\java\org\apache\nutch\metadata\DublinCore.java,src\java\org\apache\nutch\metadata\DublinCore.java,True
+src\java\org\apache\nutch\parse\ParsePluginsReader.java,src\java\org\apache\nutch\parse\ParsePluginsReader.java,True
+src\java\org\apache\nutch\indexer\IndexingFilter.java,src\java\org\apache\nutch\indexer\IndexingFilter.java,True
+src\plugin\urlfilter-domain\src\java\org\apache\nutch\urlfilter\domain\DomainURLFilter.java,src\plugin\urlfilter-domain\src\java\org\apache\nutch\urlfilter\domain\DomainURLFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nselfu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nselfu.ads,True
+src\test\org\apache\nutch\parse\TestParseData.java,src\test\org\apache\nutch\parse\TestParseData.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\HTMLMetaProcessor.java,src\plugin\parse-tika\src\java\org\apache\nutch\parse\tika\HTMLMetaProcessor.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-charac.ads,Program Files\SciTools\conf\understand\ada\ada95\a-charac.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-titest.ads,Program Files\SciTools\conf\understand\ada\ada95\a-titest.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tastim.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tastim.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-string.ads,Program Files\SciTools\conf\understand\ada\ada95\a-string.ads,True
+src\java\org\apache\nutch\parse\ParseStatus.java,src\java\org\apache\nutch\parse\ParseStatus.java,True
+src\java\org\apache\nutch\crawl\CrawlDb.java,src\java\org\apache\nutch\crawl\CrawlDb.java,True
+src\java\org\apache\nutch\tools\arc\ArcInputFormat.java,src\java\org\apache\nutch\tools\arc\ArcInputFormat.java,True
+src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCParseFilter.java,src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCParseFilter.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionBadSystResponse.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionBadSystResponse.java,True
+src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagQueryFilter.java,src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ticoio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ticoio.ads,True
+src\test\org\apache\nutch\metadata\TestSpellCheckedMetadata.java,src\test\org\apache\nutch\metadata\TestSpellCheckedMetadata.java,True
+src\plugin\ontology\src\java\org\apache\nutch\ontology\jena\OwlParser.java,src\plugin\ontology\src\java\org\apache\nutch\ontology\jena\OwlParser.java,True
+src\java\org\apache\nutch\crawl\NutchWritable.java,src\java\org\apache\nutch\crawl\NutchWritable.java,True
+Program Files\SciTools\conf\understand\ada\ada95\calendar.ads,Program Files\SciTools\conf\understand\ada\ada95\calendar.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\unchdeal.ads,Program Files\SciTools\conf\understand\ada\ada95\unchdeal.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-siwtio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-siwtio.ads,True
+src\plugin\parse-text\src\java\org\apache\nutch\parse\text\TextParser.java,src\plugin\parse-text\src\java\org\apache\nutch\parse\text\TextParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valint.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valint.ads,True
+src\java\org\apache\nutch\metadata\HttpHeaders.java,src\java\org\apache\nutch\metadata\HttpHeaders.java,True
+src\java\org\apache\nutch\indexer\field\CustomFields.java,src\java\org\apache\nutch\indexer\field\CustomFields.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-sequio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-sequio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cpoerr.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cpoerr.ads,True
+src\java\org\apache\nutch\crawl\Generator.java,src\java\org\apache\nutch\crawl\Generator.java,False
+src\java\org\apache\nutch\crawl\DefaultFetchSchedule.java,src\java\org\apache\nutch\crawl\DefaultFetchSchedule.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-uncdea.ads,Program Files\SciTools\conf\understand\ada\ada95\a-uncdea.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-taspda.ads,Program Files\SciTools\conf\understand\ada\ada95\s-taspda.ads,True
+src\plugin\urlnormalizer-regex\src\java\org\apache\nutch\net\urlnormalizer\regex\RegexURLNormalizer.java,src\plugin\urlnormalizer-regex\src\java\org\apache\nutch\net\urlnormalizer\regex\RegexURLNormalizer.java,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\FastSavedException.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\FastSavedException.java,True
+src\plugin\lib-parsems\src\java\org\apache\nutch\parse\ms\MSBaseParser.java,src\plugin\lib-parsems\src\java\org\apache\nutch\parse\ms\MSBaseParser.java,True
+src\java\org\apache\nutch\parse\HtmlParseFilter.java,src\java\org\apache\nutch\parse\HtmlParseFilter.java,True
+src\java\org\apache\nutch\indexer\Indexer.java,src\java\org\apache\nutch\indexer\Indexer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expsin.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expsin.ads,True
+src\java\org\apache\nutch\crawl\MapWritable.java,src\java\org\apache\nutch\crawl\MapWritable.java,True
+src\java\org\apache\nutch\searcher\QueryFilters.java,src\java\org\apache\nutch\searcher\QueryFilters.java,True
+src\java\org\apache\nutch\analysis\CharStream.java,src\java\org\apache\nutch\analysis\CharStream.java,True
+src\java\org\apache\nutch\plugin\ExtensionPoint.java,src\java\org\apache\nutch\plugin\ExtensionPoint.java,True
+src\java\org\apache\nutch\scoring\webgraph\Node.java,src\java\org\apache\nutch\scoring\webgraph\Node.java,True
+src\java\org\apache\nutch\parse\ParseSegment.java,src\java\org\apache\nutch\parse\ParseSegment.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-finali.ads,Program Files\SciTools\conf\understand\ada\ada95\a-finali.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-taprob.ads,Program Files\SciTools\conf\understand\ada\ada95\s-taprob.ads,True
+src\java\org\apache\nutch\protocol\RobotRules.java,src\java\org\apache\nutch\protocol\RobotRules.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ststio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ststio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-unstyp.ads,Program Files\SciTools\conf\understand\ada\ada95\s-unstyp.ads,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMBuilder.java,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMBuilder.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-stream.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stream.ads,True
+src\test\org\apache\nutch\fetcher\TestFetcher.java,src\test\org\apache\nutch\fetcher\TestFetcher.java,False
+src\java\org\apache\nutch\tools\FreeGenerator.java,src\java\org\apache\nutch\tools\FreeGenerator.java,False
+src\plugin\ontology\src\java\org\apache\nutch\ontology\jena\OntologyImpl.java,src\plugin\ontology\src\java\org\apache\nutch\ontology\jena\OntologyImpl.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tasmem.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasmem.ads,True
+src\java\org\apache\nutch\scoring\webgraph\LinkRank.java,src\java\org\apache\nutch\scoring\webgraph\LinkRank.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-stwibo.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stwibo.ads,True
+src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\HTMLLanguageParser.java,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\HTMLLanguageParser.java,False
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\Client.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\Client.java,True
+src\plugin\parse-msexcel\src\test\org\apache\nutch\parse\msexcel\TestMSExcelParser.java,src\plugin\parse-msexcel\src\test\org\apache\nutch\parse\msexcel\TestMSExcelParser.java,True
+src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileResponse.java,src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileResponse.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-pooglo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-pooglo.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\g-busora.ads,Program Files\SciTools\conf\understand\ada\ada95\g-busora.ads,True
+src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\HttpResponse.java,src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\HttpResponse.java,False
+src\java\org\apache\nutch\indexer\NutchIndexWriter.java,src\java\org\apache\nutch\indexer\NutchIndexWriter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-caldel.ads,Program Files\SciTools\conf\understand\ada\ada95\a-caldel.ads,True
+src\java\org\apache\nutch\searcher\response\ResponseWriter.java,src\java\org\apache\nutch\searcher\response\ResponseWriter.java,True
+src\java\org\apache\nutch\searcher\Query.java,src\java\org\apache\nutch\searcher\Query.java,False
+src\plugin\subcollection\src\java\org\apache\nutch\indexer\subcollection\SubcollectionIndexingFilter.java,src\plugin\subcollection\src\java\org\apache\nutch\indexer\subcollection\SubcollectionIndexingFilter.java,False
+src\java\org\apache\nutch\parse\ParseOutputFormat.java,src\java\org\apache\nutch\parse\ParseOutputFormat.java,False
+src\java\org\apache\nutch\indexer\field\FieldFilter.java,src\java\org\apache\nutch\indexer\field\FieldFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nlelfu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nlelfu.ads,True
+src\java\org\apache\nutch\segment\SegmentMerger.java,src\java\org\apache\nutch\segment\SegmentMerger.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-timtyp.ads,Program Files\SciTools\conf\understand\ada\ada95\s-timtyp.ads,True
+src\java\org\apache\nutch\parse\ParserChecker.java,src\java\org\apache\nutch\parse\ParserChecker.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-taspri.ads,Program Files\SciTools\conf\understand\ada\ada95\s-taspri.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-fwteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-fwteio.ads,True
+src\java\org\apache\nutch\util\LogUtil.java,src\java\org\apache\nutch\util\LogUtil.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-pooloc.ads,Program Files\SciTools\conf\understand\ada\ada95\s-pooloc.ads,True
+src\java\org\apache\nutch\parse\Outlink.java,src\java\org\apache\nutch\parse\Outlink.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cobol.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cobol.ads,True
+src\plugin\query-site\src\java\org\apache\nutch\searcher\site\SiteQueryFilter.java,src\plugin\query-site\src\java\org\apache\nutch\searcher\site\SiteQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imguns.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imguns.ads,True
+src\plugin\urlfilter-validator\src\java\org\apache\nutch\urlfilter\validator\UrlValidator.java,src\plugin\urlfilter-validator\src\java\org\apache\nutch\urlfilter\validator\UrlValidator.java,True
+src\plugin\tld\src\java\org\apache\nutch\indexer\tld\TLDIndexingFilter.java,src\plugin\tld\src\java\org\apache\nutch\indexer\tld\TLDIndexingFilter.java,True
+src\java\org\apache\nutch\analysis\NutchAnalysisTokenManager.java,src\java\org\apache\nutch\analysis\NutchAnalysisTokenManager.java,False
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionUnknownForcedDataClose.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionUnknownForcedDataClose.java,True
+src\java\org\apache\nutch\metadata\MetaWrapper.java,src\java\org\apache\nutch\metadata\MetaWrapper.java,True
+src\java\org\apache\nutch\indexer\IndexerOutputFormat.java,src\java\org\apache\nutch\indexer\IndexerOutputFormat.java,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\Word6Extractor.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\Word6Extractor.java,True
+src\java\org\apache\nutch\util\PrefixStringMatcher.java,src\java\org\apache\nutch\util\PrefixStringMatcher.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnint.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnint.ads,True
+src\plugin\urlnormalizer-regex\src\test\org\apache\nutch\net\urlnormalizer\regex\TestRegexURLNormalizer.java,src\plugin\urlnormalizer-regex\src\test\org\apache\nutch\net\urlnormalizer\regex\TestRegexURLNormalizer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-llftio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-llftio.ads,True
+src\java\org\apache\nutch\protocol\ProtocolOutput.java,src\java\org\apache\nutch\protocol\ProtocolOutput.java,True
+src\java\org\apache\nutch\searcher\DistributedSearchBean.java,src\java\org\apache\nutch\searcher\DistributedSearchBean.java,False
+src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagIndexingFilter.java,src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagIndexingFilter.java,True
+src\java\org\apache\nutch\crawl\Inlink.java,src\java\org\apache\nutch\crawl\Inlink.java,True
+src\java\org\apache\nutch\crawl\Crawl.java,src\java\org\apache\nutch\crawl\Crawl.java,False
+src\plugin\creativecommons\src\test\org\creativecommons\nutch\TestCCParseFilter.java,src\plugin\creativecommons\src\test\org\creativecommons\nutch\TestCCParseFilter.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpException.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-vallli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-vallli.ads,True
+src\plugin\parse-msexcel\src\java\org\apache\nutch\parse\msexcel\ExcelExtractor.java,src\plugin\parse-msexcel\src\java\org\apache\nutch\parse\msexcel\ExcelExtractor.java,True
+src\java\org\apache\nutch\clustering\HitsCluster.java,src\java\org\apache\nutch\clustering\HitsCluster.java,True
+src\java\org\apache\nutch\parse\HtmlParseFilters.java,src\java\org\apache\nutch\parse\HtmlParseFilters.java,False
+src\java\org\apache\nutch\util\DeflateUtils.java,src\java\org\apache\nutch\util\DeflateUtils.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgboo.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgboo.ads,True
+src\java\org\apache\nutch\parse\ParsePluginList.java,src\java\org\apache\nutch\parse\ParsePluginList.java,True
+src\java\org\apache\nutch\crawl\LinkDb.java,src\java\org\apache\nutch\crawl\LinkDb.java,True
+src\test\org\apache\nutch\indexer\TestIndexingFilters.java,src\test\org\apache\nutch\indexer\TestIndexingFilters.java,True
+src\java\org\apache\nutch\util\NutchJob.java,src\java\org\apache\nutch\util\NutchJob.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nudira.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nudira.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-calend.ads,Program Files\SciTools\conf\understand\ada\ada95\a-calend.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-llitio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-llitio.ads,True
+src\plugin\query-more\src\java\org\apache\nutch\searcher\more\DateQueryFilter.java,src\plugin\query-more\src\java\org\apache\nutch\searcher\more\DateQueryFilter.java,False
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthentication.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthentication.java,True
+src\java\org\apache\nutch\searcher\SearchBean.java,src\java\org\apache\nutch\searcher\SearchBean.java,True
+Program Files\SciTools\conf\understand\ada\ada95\gnat.ads,Program Files\SciTools\conf\understand\ada\ada95\gnat.ads,True
+src\java\org\apache\nutch\crawl\CrawlDatum.java,src\java\org\apache\nutch\crawl\CrawlDatum.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-imgllu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgllu.ads,True
+src\test\org\apache\nutch\util\TestURLUtil.java,src\test\org\apache\nutch\util\TestURLUtil.java,True
+Program Files\SciTools\conf\understand\ada\ada95\standard95.ads,Program Files\SciTools\conf\understand\ada\ada95\standard95.ads,True
+src\java\org\apache\nutch\searcher\RPCSearchBean.java,src\java\org\apache\nutch\searcher\RPCSearchBean.java,True
+src\java\org\apache\nutch\analysis\NutchAnalysisConstants.java,src\java\org\apache\nutch\analysis\NutchAnalysisConstants.java,True
+lib\native\Linux-i386-32\libhadoop.a,lib\native\Linux-amd64-64\libhadoop.a,False
+Program Files\SciTools\conf\understand\ada\ada95\s-widwch.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widwch.ads,True
+src\plugin\summary-lucene\src\java\org\apache\nutch\summary\lucene\LuceneSummarizer.java,src\plugin\summary-lucene\src\java\org\apache\nutch\summary\lucene\LuceneSummarizer.java,False
+src\plugin\index-anchor\src\java\org\apache\nutch\indexer\anchor\AnchorIndexingFilter.java,src\plugin\index-anchor\src\java\org\apache\nutch\indexer\anchor\AnchorIndexingFilter.java,True
+src\java\org\apache\nutch\protocol\ProtocolNotFound.java,src\java\org\apache\nutch\protocol\ProtocolNotFound.java,True
+src\java\org\apache\nutch\crawl\CrawlDbFilter.java,src\java\org\apache\nutch\crawl\CrawlDbFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-stoele.ads,Program Files\SciTools\conf\understand\ada\ada95\s-stoele.ads,True
+src\java\org\apache\nutch\util\domain\DomainSuffixesReader.java,src\java\org\apache\nutch\util\domain\DomainSuffixesReader.java,True
+src\java\org\apache\nutch\scoring\webgraph\WebGraph.java,src\java\org\apache\nutch\scoring\webgraph\WebGraph.java,True
+src\java\org\apache\nutch\util\DomUtil.java,src\java\org\apache\nutch\util\DomUtil.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpError.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpError.java,True
+src\java\org\apache\nutch\net\URLFilter.java,src\java\org\apache\nutch\net\URLFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-csycon.ads,Program Files\SciTools\conf\understand\ada\ada95\i-csycon.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tasuti.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasuti.ads,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\DOMBuilder.java,src\plugin\parse-tika\src\java\org\apache\nutch\parse\tika\DOMBuilder.java,False
+src\plugin\lib-regex-filter\src\test\org\apache\nutch\urlfilter\api\RegexURLFilterBaseTest.java,src\plugin\lib-regex-filter\src\test\org\apache\nutch\urlfilter\api\RegexURLFilterBaseTest.java,True
+src\test\org\apache\nutch\parse\TestParseText.java,src\test\org\apache\nutch\parse\TestParseText.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-cconst.ads,Program Files\SciTools\conf\understand\ada\ada95\s-cconst.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-textio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-textio.ads,True
+src\java\org\apache\nutch\util\GenericWritableConfigurable.java,src\java\org\apache\nutch\util\GenericWritableConfigurable.java,True
+src\java\org\apache\nutch\scoring\webgraph\ScoreUpdater.java,src\java\org\apache\nutch\scoring\webgraph\ScoreUpdater.java,True
+src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCDeleteUnlicensedTool.java,src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCDeleteUnlicensedTool.java,False
+src\plugin\index-more\src\test\org\apache\nutch\indexer\more\TestMoreIndexingFilter.java,src\plugin\index-more\src\test\org\apache\nutch\indexer\more\TestMoreIndexingFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expmod.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expmod.ads,True
+src\java\org\apache\nutch\util\ObjectCache.java,src\java\org\apache\nutch\util\ObjectCache.java,True
+src\java\org\apache\nutch\plugin\PluginManifestParser.java,src\java\org\apache\nutch\plugin\PluginManifestParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-sytaco.ads,Program Files\SciTools\conf\understand\ada\ada95\a-sytaco.ads,True
+src\java\org\apache\nutch\analysis\TokenMgrError.java,src\java\org\apache\nutch\analysis\TokenMgrError.java,True
+src\test\org\apache\nutch\searcher\TestQuery.java,src\test\org\apache\nutch\searcher\TestQuery.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-widllu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widllu.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-inteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-inteio.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cpthre.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cpthre.ads,True
+src\test\org\apache\nutch\crawl\TestGenerator.java,src\test\org\apache\nutch\crawl\TestGenerator.java,False
+src\java\org\apache\nutch\parse\HTMLMetaTags.java,src\java\org\apache\nutch\parse\HTMLMetaTags.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-siteio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-siteio.ads,True
+src\plugin\subcollection\src\test\org\apache\nutch\collection\TestSubcollection.java,src\plugin\subcollection\src\test\org\apache\nutch\collection\TestSubcollection.java,True
+src\test\org\apache\nutch\crawl\TestSignatureFactory.java,src\test\org\apache\nutch\crawl\TestSignatureFactory.java,True
+src\plugin\parse-zip\src\java\org\apache\nutch\parse\zip\ZipParser.java,src\plugin\parse-zip\src\java\org\apache\nutch\parse\zip\ZipParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-teioau.ads,Program Files\SciTools\conf\understand\ada\ada95\a-teioau.ads,True
+src\java\org\apache\nutch\analysis\NutchDocumentTokenizer.java,src\java\org\apache\nutch\analysis\NutchDocumentTokenizer.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-ngcoty.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ngcoty.ads,True
+src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\RSSParser.java,src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\RSSParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnsfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnsfl.ads,True
+src\java\org\apache\nutch\util\GZIPUtils.java,src\java\org\apache\nutch\util\GZIPUtils.java,True
+src\plugin\feed\src\java\org\apache\nutch\indexer\feed\FeedIndexingFilter.java,src\plugin\feed\src\java\org\apache\nutch\indexer\feed\FeedIndexingFilter.java,True
+src\java\org\apache\nutch\indexer\solr\SolrConstants.java,src\java\org\apache\nutch\indexer\solr\SolrConstants.java,True
+src\test\org\apache\nutch\util\TestSuffixStringMatcher.java,src\test\org\apache\nutch\util\TestSuffixStringMatcher.java,True
+src\plugin\parse-rss\src\test\org\apache\nutch\parse\rss\TestRSSParser.java,src\plugin\parse-rss\src\test\org\apache\nutch\parse\rss\TestRSSParser.java,True
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthenticationException.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpAuthenticationException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-numaux.ads,Program Files\SciTools\conf\understand\ada\ada95\a-numaux.ads,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\MSWordParser.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\MSWordParser.java,True
+src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\Http.java,src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\Http.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-wtitst.ads,Program Files\SciTools\conf\understand\ada\ada95\a-wtitst.ads,True
+src\java\org\apache\nutch\util\domain\TopLevelDomain.java,src\java\org\apache\nutch\util\domain\TopLevelDomain.java,True
+src\plugin\lib-http\src\test\org\apache\nutch\protocol\http\api\TestRobotRulesParser.java,src\plugin\lib-http\src\test\org\apache\nutch\protocol\http\api\TestRobotRulesParser.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionControlClosedByForcedDataClose.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionControlClosedByForcedDataClose.java,True
+src\test\org\apache\nutch\util\TestNodeWalker.java,src\test\org\apache\nutch\util\TestNodeWalker.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-teiopi.ads,Program Files\SciTools\conf\understand\ada\ada95\a-teiopi.ads,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\PrintCommandListener.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\PrintCommandListener.java,True
+src\java\org\apache\nutch\searcher\FetchedSegments.java,src\java\org\apache\nutch\searcher\FetchedSegments.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-parame.ads,Program Files\SciTools\conf\understand\ada\ada95\s-parame.ads,True
+src\java\org\apache\nutch\searcher\LinkDbInlinks.java,src\java\org\apache\nutch\searcher\LinkDbInlinks.java,True
+src\java\org\apache\nutch\net\URLNormalizerChecker.java,src\java\org\apache\nutch\net\URLNormalizerChecker.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ngcefu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ngcefu.ads,True
+src\java\org\apache\nutch\parse\ParseResult.java,src\java\org\apache\nutch\parse\ParseResult.java,True
+src\java\org\apache\nutch\crawl\FetchSchedule.java,src\java\org\apache\nutch\crawl\FetchSchedule.java,True
+src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\Clusterer.java,src\plugin\clustering-carrot2\src\java\org\apache\nutch\clustering\carrot2\Clusterer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expllu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expllu.ads,True
+src\java\org\apache\nutch\html\Entities.java,src\java\org\apache\nutch\html\Entities.java,True
+src\java\org\apache\nutch\clustering\OnlineClustererFactory.java,src\java\org\apache\nutch\clustering\OnlineClustererFactory.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-poosiz.ads,Program Files\SciTools\conf\understand\ada\ada95\s-poosiz.ads,True
+src\java\org\apache\nutch\indexer\field\Fields.java,src\java\org\apache\nutch\indexer\field\Fields.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-valrea.ads,Program Files\SciTools\conf\understand\ada\ada95\s-valrea.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-stwifi.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stwifi.ads,True
+src\java\org\apache\nutch\net\URLFilterException.java,src\java\org\apache\nutch\net\URLFilterException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nuelfu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nuelfu.ads,True
+src\plugin\field-boost\src\java\org\apache\nutch\indexer\field\boost\BoostFieldFilter.java,src\plugin\field-boost\src\java\org\apache\nutch\indexer\field\boost\BoostFieldFilter.java,True
+src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileError.java,src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\FileError.java,True
+src\java\org\apache\nutch\crawl\CrawlDbReader.java,src\java\org\apache\nutch\crawl\CrawlDbReader.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-std.ads,Program Files\SciTools\conf\understand\ada\ada95\s-std.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-nllefu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-nllefu.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-dynpri.ads,Program Files\SciTools\conf\understand\ada\ada95\a-dynpri.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-signal.ads,Program Files\SciTools\conf\understand\ada\ada95\s-signal.ads,True
+src\java\org\apache\nutch\searcher\HitContent.java,src\java\org\apache\nutch\searcher\HitContent.java,True
+src\java\org\apache\nutch\searcher\DistributedSearch.java,src\java\org\apache\nutch\searcher\DistributedSearch.java,True
+src\java\org\apache\nutch\ontology\Ontology.java,src\java\org\apache\nutch\ontology\Ontology.java,True
+src\plugin\urlnormalizer-basic\src\test\org\apache\nutch\net\urlnormalizer\basic\TestBasicURLNormalizer.java,src\plugin\urlnormalizer-basic\src\test\org\apache\nutch\net\urlnormalizer\basic\TestBasicURLNormalizer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\unchconv.ads,Program Files\SciTools\conf\understand\ada\ada95\unchconv.ads,True
+src\java\org\apache\nutch\parse\Parser.java,src\plugin\ontology\src\java\org\apache\nutch\ontology\jena\Parser.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-exnflt.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnflt.ads,True
+src\plugin\query-url\src\java\org\apache\nutch\searcher\url\URLQueryFilter.java,src\plugin\query-url\src\java\org\apache\nutch\searcher\url\URLQueryFilter.java,True
+src\plugin\feed\src\java\org\apache\nutch\parse\feed\FeedParser.java,src\plugin\feed\src\java\org\apache\nutch\parse\feed\FeedParser.java,True
+src\java\org\apache\nutch\metadata\CreativeCommons.java,src\java\org\apache\nutch\metadata\CreativeCommons.java,True
+Program Files\SciTools\conf\understand\ada\ada95\ada.ads,Program Files\SciTools\conf\understand\ada\ada95\ada.ads,True
+src\java\org\apache\nutch\indexer\IndexingException.java,src\java\org\apache\nutch\indexer\IndexingException.java,True
+src\java\org\apache\nutch\net\protocols\HttpDateFormat.java,src\java\org\apache\nutch\net\protocols\HttpDateFormat.java,True
+src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\Http.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\Http.java,False
+src\plugin\tld\src\java\org\apache\nutch\scoring\tld\TLDScoringFilter.java,src\plugin\tld\src\java\org\apache\nutch\scoring\tld\TLDScoringFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-calcon.ads,Program Files\SciTools\conf\understand\ada\ada95\a-calcon.ads,True
+src\plugin\parse-zip\src\test\org\apache\nutch\parse\zip\TestZipParser.java,src\plugin\parse-zip\src\test\org\apache\nutch\parse\zip\TestZipParser.java,True
+src\java\org\apache\nutch\searcher\HitInlinks.java,src\java\org\apache\nutch\searcher\HitInlinks.java,True
+src\java\org\apache\nutch\clustering\OnlineClusterer.java,src\java\org\apache\nutch\clustering\OnlineClusterer.java,True
+src\java\org\apache\nutch\indexer\IndexerMapReduce.java,src\java\org\apache\nutch\indexer\IndexerMapReduce.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-imgwch.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgwch.ads,True
+src\java\org\apache\nutch\plugin\PluginClassLoader.java,src\java\org\apache\nutch\plugin\PluginClassLoader.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expint.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expint.ads,True
+src\java\org\apache\nutch\crawl\SignatureFactory.java,src\java\org\apache\nutch\crawl\SignatureFactory.java,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\PPTExtractor.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\PPTExtractor.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-stmaco.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stmaco.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-wchstw.ads,Program Files\SciTools\conf\understand\ada\ada95\s-wchstw.ads,True
+src\plugin\urlnormalizer-pass\src\java\org\apache\nutch\net\urlnormalizer\pass\PassURLNormalizer.java,src\plugin\urlnormalizer-pass\src\java\org\apache\nutch\net\urlnormalizer\pass\PassURLNormalizer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-widlli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-widlli.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\g-io.ads,Program Files\SciTools\conf\understand\ada\ada95\g-io.ads,True
+src\java\org\apache\nutch\indexer\HighFreqTerms.java,src\java\org\apache\nutch\indexer\HighFreqTerms.java,False
+src\plugin\parse-msword\src\test\org\apache\nutch\parse\msword\TestMSWordParser.java,src\plugin\parse-tika\src\test\org\apache\nutch\tika\TestMSWordParser.java,False
+src\java\org\apache\nutch\searcher\FieldQueryFilter.java,src\java\org\apache\nutch\searcher\FieldQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tasque.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tasque.ads,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordTextPiece.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\WordTextPiece.java,True
+src\java\org\apache\nutch\indexer\solr\SolrWriter.java,src\java\org\apache\nutch\indexer\solr\SolrWriter.java,False
+src\plugin\summary-basic\src\java\org\apache\nutch\summary\basic\BasicSummarizer.java,src\plugin\summary-basic\src\java\org\apache\nutch\summary\basic\BasicSummarizer.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-exnlfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnlfl.ads,True
+src\java\org\apache\nutch\searcher\Summary.java,src\java\org\apache\nutch\searcher\Summary.java,True
+src\test\org\apache\nutch\util\TestEncodingDetector.java,src\test\org\apache\nutch\util\TestEncodingDetector.java,True
+src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\TestMSPowerPointParser.java,src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\TestMSPowerPointParser.java,True
+src\plugin\ontology\src\test\org\apache\nutch\ontology\jena\TestOntology.java,src\plugin\ontology\src\test\org\apache\nutch\ontology\jena\TestOntology.java,True
+src\java\org\apache\nutch\crawl\MD5Signature.java,src\java\org\apache\nutch\crawl\MD5Signature.java,True
+src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageIndexingFilter.java,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageIndexingFilter.java,True
+src\java\org\apache\nutch\metadata\Office.java,src\java\org\apache\nutch\metadata\Office.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-liwtio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-liwtio.ads,True
+src\java\org\apache\nutch\crawl\Inlinks.java,src\java\org\apache\nutch\crawl\Inlinks.java,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\PPTConstants.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\PPTConstants.java,True
+src\test\org\apache\nutch\analysis\TestQueryParser.java,src\test\org\apache\nutch\analysis\TestQueryParser.java,True
+src\java\org\apache\nutch\util\domain\DomainSuffix.java,src\java\org\apache\nutch\util\domain\DomainSuffix.java,True
+src\java\org\apache\nutch\scoring\webgraph\LinkDatum.java,src\java\org\apache\nutch\scoring\webgraph\LinkDatum.java,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\FilteredStringWriter.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\FilteredStringWriter.java,True
+src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\MSPowerPointParser.java,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\MSPowerPointParser.java,True
+src\java\org\apache\nutch\util\HadoopFSUtil.java,src\java\org\apache\nutch\util\HadoopFSUtil.java,True
+src\java\org\apache\nutch\net\URLNormalizer.java,src\java\org\apache\nutch\net\URLNormalizer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnlin.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnlin.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-wtiopi.ads,Program Files\SciTools\conf\understand\ada\ada95\a-wtiopi.ads,True
+src\plugin\parse-html\src\test\org\apache\nutch\parse\html\TestRobotsMetaProcessor.java,src\plugin\parse-html\src\test\org\apache\nutch\parse\html\TestRobotsMetaProcessor.java,True
+src\java\org\apache\nutch\util\MimeUtil.java,src\java\org\apache\nutch\util\MimeUtil.java,False
+src\java\org\apache\nutch\searcher\HitDetails.java,src\java\org\apache\nutch\searcher\HitDetails.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-explfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-explfl.ads,True
+src\java\org\apache\nutch\net\URLNormalizers.java,src\java\org\apache\nutch\net\URLNormalizers.java,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\Ftp.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\Ftp.java,True
+src\java\org\apache\nutch\metadata\Metadata.java,src\java\org\apache\nutch\metadata\Metadata.java,True
+src\java\org\apache\nutch\searcher\Summarizer.java,src\java\org\apache\nutch\searcher\Summarizer.java,True
+src\test\org\apache\nutch\plugin\TestPluginSystem.java,src\test\org\apache\nutch\plugin\TestPluginSystem.java,True
+src\java\org\apache\nutch\indexer\field\FieldWritable.java,src\java\org\apache\nutch\indexer\field\FieldWritable.java,True
+src\java\org\apache\nutch\tools\PruneIndexTool.java,src\java\org\apache\nutch\tools\PruneIndexTool.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-stwiun.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stwiun.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-unccon.ads,Program Files\SciTools\conf\understand\ada\ada95\a-unccon.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expsfl.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expsfl.ads,True
+src\test\org\apache\nutch\parse\TestOutlinkExtractor.java,src\test\org\apache\nutch\parse\TestOutlinkExtractor.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-astaco.ads,Program Files\SciTools\conf\understand\ada\ada95\a-astaco.ads,True
+src\java\org\apache\nutch\analysis\TokenManager.java,src\java\org\apache\nutch\analysis\TokenManager.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgint.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgint.ads,True
+src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCIndexingFilter.java,src\plugin\creativecommons\src\java\org\creativecommons\nutch\CCIndexingFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-expllf.ads,Program Files\SciTools\conf\understand\ada\ada95\s-expllf.ads,True
+src\plugin\clustering-carrot2\src\test\org\apache\nutch\clustering\carrot2\TestClusterer.java,src\plugin\clustering-carrot2\src\test\org\apache\nutch\clustering\carrot2\TestClusterer.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-fore.ads,Program Files\SciTools\conf\understand\ada\ada95\s-fore.ads,True
+src\test\org\apache\nutch\indexer\TestIndexSorter.java,src\test\org\apache\nutch\indexer\TestIndexSorter.java,False
+Program Files\SciTools\conf\understand\ada\ada95\i-cpoint.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cpoint.ads,True
+src\java\org\apache\nutch\parse\Parse.java,src\java\org\apache\nutch\parse\Parse.java,True
+src\java\org\apache\nutch\fetcher\Fetcher.java,src\java\org\apache\nutch\fetcher\Fetcher.java,False
+src\plugin\parse-pdf\src\test\org\apache\nutch\parse\pdf\TestPdfParser.java,src\plugin\parse-tika\src\test\org\apache\nutch\tika\TestPdfParser.java,False
+src\plugin\lib-parsems\src\java\org\apache\nutch\parse\ms\MSExtractor.java,src\plugin\lib-parsems\src\java\org\apache\nutch\parse\ms\MSExtractor.java,True
+src\plugin\parse-rtf\src\test\org\apache\nutch\parse\rtf\TestRTFParser.java,src\plugin\parse-tika\src\test\org\apache\nutch\tika\TestRTFParser.java,False
+src\java\org\apache\nutch\tools\compat\CrawlDbConverter.java,src\java\org\apache\nutch\tools\compat\CrawlDbConverter.java,True
+src\plugin\parse-msword\src\test\org\apache\nutch\parse\msword\TestMSWordParser.java,src\plugin\parse-msword\src\test\org\apache\nutch\parse\msword\TestMSWordParser.java,True
+src\java\org\apache\nutch\protocol\ProtocolException.java,src\java\org\apache\nutch\net\protocols\ProtocolException.java,False
+src\java\org\apache\nutch\tools\SearchLoadTester.java,src\java\org\apache\nutch\tools\SearchLoadTester.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cstrin.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cstrin.ads,True
+src\java\org\apache\nutch\parse\ParseException.java,src\java\org\apache\nutch\analysis\ParseException.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-retico.ads,Program Files\SciTools\conf\understand\ada\ada95\a-retico.ads,True
+src\java\org\apache\nutch\searcher\SegmentBean.java,src\java\org\apache\nutch\searcher\SegmentBean.java,True
+src\java\org\apache\nutch\searcher\OpenSearchServlet.java,src\java\org\apache\nutch\searcher\OpenSearchServlet.java,True
+src\java\org\apache\nutch\searcher\NutchBean.java,src\java\org\apache\nutch\searcher\NutchBean.java,False
+src\java\org\apache\nutch\crawl\CrawlDbMerger.java,src\java\org\apache\nutch\crawl\CrawlDbMerger.java,True
+src\java\org\apache\nutch\indexer\IndexingFilters.java,src\java\org\apache\nutch\indexer\IndexingFilters.java,True
+src\test\org\apache\nutch\crawl\TestInjector.java,src\test\org\apache\nutch\crawl\TestInjector.java,True
+src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\FileExtensionFilter.java,src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\FileExtensionFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-stwise.ads,Program Files\SciTools\conf\understand\ada\ada95\a-stwise.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgdec.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgdec.ads,True
+src\java\org\apache\nutch\plugin\PluginDescriptor.java,src\java\org\apache\nutch\plugin\PluginDescriptor.java,True
+src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\File.java,src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\File.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-taside.ads,Program Files\SciTools\conf\understand\ada\ada95\a-taside.ads,True
+src\plugin\parse-zip\src\java\org\apache\nutch\parse\zip\ZipTextExtractor.java,src\plugin\parse-zip\src\java\org\apache\nutch\parse\zip\ZipTextExtractor.java,True
+src\java\org\apache\nutch\analysis\NutchAnalyzer.java,src\java\org\apache\nutch\analysis\NutchAnalyzer.java,True
+src\java\org\apache\nutch\crawl\Injector.java,src\java\org\apache\nutch\crawl\Injector.java,False
+src\test\org\apache\nutch\plugin\HelloWorldExtension.java,src\test\org\apache\nutch\plugin\HelloWorldExtension.java,True
+src\java\org\apache\nutch\indexer\lucene\LuceneWriter.java,src\java\org\apache\nutch\indexer\lucene\LuceneWriter.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-comlin.ads,Program Files\SciTools\conf\understand\ada\ada95\a-comlin.ads,True
+src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionCanNotHaveDataConnection.java,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\FtpExceptionCanNotHaveDataConnection.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-finimp.ads,Program Files\SciTools\conf\understand\ada\ada95\s-finimp.ads,True
+src\plugin\urlfilter-automaton\src\test\org\apache\nutch\urlfilter\automaton\TestAutomatonURLFilter.java,src\plugin\urlfilter-automaton\src\test\org\apache\nutch\urlfilter\automaton\TestAutomatonURLFilter.java,True
+src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\HttpBase.java,src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\HttpBase.java,False
+src\test\org\apache\nutch\indexer\TestDeleteDuplicates.java,src\test\org\apache\nutch\indexer\TestDeleteDuplicates.java,False
+Program Files\SciTools\conf\understand\ada\ada95\a-strfix.ads,Program Files\SciTools\conf\understand\ada\ada95\a-strfix.ads,True
+src\java\org\apache\nutch\searcher\RawFieldQueryFilter.java,src\java\org\apache\nutch\searcher\RawFieldQueryFilter.java,True
+src\java\org\apache\nutch\protocol\ProtocolException.java,src\java\org\apache\nutch\protocol\ProtocolException.java,True
+src\java\org\apache\nutch\plugin\PluginRuntimeException.java,src\java\org\apache\nutch\plugin\PluginRuntimeException.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-strcon.ads,Program Files\SciTools\conf\understand\ada\ada95\s-strcon.ads,True
+src\java\org\apache\nutch\indexer\field\FieldType.java,src\java\org\apache\nutch\indexer\field\FieldType.java,True
+src\plugin\parse-oo\src\java\org\apache\nutch\parse\oo\OOParser.java,src\plugin\parse-oo\src\java\org\apache\nutch\parse\oo\OOParser.java,True
+src\plugin\response-xml\src\java\org\apache\nutch\searcher\response\xml\XMLResponseWriter.java,src\plugin\response-xml\src\java\org\apache\nutch\searcher\response\xml\XMLResponseWriter.java,True
+src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagParser.java,src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\RelTagParser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-assert.ads,Program Files\SciTools\conf\understand\ada\ada95\s-assert.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\i-cpotim.ads,Program Files\SciTools\conf\understand\ada\ada95\i-cpotim.ads,True
+src\test\org\apache\nutch\crawl\TestCrawlDbMerger.java,src\test\org\apache\nutch\crawl\TestCrawlDbMerger.java,True
+src\test\org\apache\nutch\searcher\TestSummary.java,src\test\org\apache\nutch\searcher\TestSummary.java,True
+src\java\org\apache\nutch\util\TrieStringMatcher.java,src\java\org\apache\nutch\util\TrieStringMatcher.java,True
+src\java\org\apache\nutch\crawl\LinkDbReader.java,src\java\org\apache\nutch\crawl\LinkDbReader.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ssitio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ssitio.ads,True
+src\plugin\parse-js\src\java\org\apache\nutch\parse\js\JSParseFilter.java,src\plugin\parse-js\src\java\org\apache\nutch\parse\js\JSParseFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-addima.ads,Program Files\SciTools\conf\understand\ada\ada95\s-addima.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exngen.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exngen.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-imgbiu.ads,Program Files\SciTools\conf\understand\ada\ada95\s-imgbiu.ads,True
+src\java\org\apache\nutch\scoring\ScoringFilters.java,src\java\org\apache\nutch\scoring\ScoringFilters.java,True
+src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\DummyX509TrustManager.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\DummyX509TrustManager.java,True
+Program Files\SciTools\conf\understand\ada\ada95\text_io.ads,Program Files\SciTools\conf\understand\ada\ada95\text_io.ads,True
+src\plugin\parse-swf\src\java\org\apache\nutch\parse\swf\SWFParser.java,src\plugin\parse-swf\src\java\org\apache\nutch\parse\swf\SWFParser.java,True
+src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\HttpResponse.java,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\HttpResponse.java,False
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\HTMLMetaProcessor.java,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\HTMLMetaProcessor.java,True
+src\java\org\apache\nutch\scoring\webgraph\NodeDumper.java,src\java\org\apache\nutch\scoring\webgraph\NodeDumper.java,True
+src\java\org\apache\nutch\searcher\QueryFilter.java,src\java\org\apache\nutch\searcher\QueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-chahan.ads,Program Files\SciTools\conf\understand\ada\ada95\a-chahan.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ngelfu.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ngelfu.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-tassta.ads,Program Files\SciTools\conf\understand\ada\ada95\s-tassta.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\a-ssiwti.ads,Program Files\SciTools\conf\understand\ada\ada95\a-ssiwti.ads,True
+src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\AllTests.java,src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\AllTests.java,True
+src\plugin\subcollection\src\java\org\apache\nutch\searcher\subcollection\SubcollectionQueryFilter.java,src\plugin\subcollection\src\java\org\apache\nutch\searcher\subcollection\SubcollectionQueryFilter.java,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnllf.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnllf.ads,True
+src\test\org\apache\nutch\net\TestURLFilters.java,src\test\org\apache\nutch\net\TestURLFilters.java,True
+src\plugin\parse-html\src\java\org\apache\nutch\parse\html\XMLCharacterRecognizer.java,src\plugin\parse-tika\src\java\org\apache\nutch\parse\tika\XMLCharacterRecognizer.java,False
+Program Files\SciTools\conf\understand\ada\ada95\s-wchcon.ads,Program Files\SciTools\conf\understand\ada\ada95\s-wchcon.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-exnlli.ads,Program Files\SciTools\conf\understand\ada\ada95\s-exnlli.ads,True
+src\java\org\apache\nutch\indexer\field\FieldsWritable.java,src\java\org\apache\nutch\indexer\field\FieldsWritable.java,True
+src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\Test.java,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\Test.java,True
+src\java\org\apache\nutch\tools\ResolveUrls.java,src\java\org\apache\nutch\tools\ResolveUrls.java,True
+Program Files\SciTools\conf\understand\ada\ada95\i-c.ads,Program Files\SciTools\conf\understand\ada\ada95\i-c.ads,True
+Program Files\SciTools\conf\understand\ada\ada95\s-arit64.ads,Program Files\SciTools\conf\understand\ada\ada95\s-arit64.ads,True
+src\java\org\apache\nutch\parse\Parser.java,src\java\org\apache\nutch\parse\Parser.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-wticio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-wticio.ads,True
+src\java\org\apache\nutch\searcher\Hit.java,src\java\org\apache\nutch\searcher\Hit.java,True
+src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\NGramProfile.java,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\NGramProfile.java,True
+src\java\org\apache\nutch\crawl\SignatureComparator.java,src\java\org\apache\nutch\crawl\SignatureComparator.java,True
+src\java\org\apache\nutch\searcher\response\RequestUtils.java,src\java\org\apache\nutch\searcher\response\RequestUtils.java,False
+src\java\org\apache\nutch\protocol\Content.java,src\java\org\apache\nutch\protocol\Content.java,False
+src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageIdentifier.java,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\LanguageIdentifier.java,True
+src\plugin\response-json\src\java\org\apache\nutch\searcher\response\json\JSONResponseWriter.java,src\plugin\response-json\src\java\org\apache\nutch\searcher\response\json\JSONResponseWriter.java,True
+src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\FeedParserListenerImpl.java,src\plugin\parse-rss\src\java\org\apache\nutch\parse\rss\FeedParserListenerImpl.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-decima.ads,Program Files\SciTools\conf\understand\ada\ada95\a-decima.ads,True
+src\java\org\apache\nutch\tools\compat\ReprUrlFixer.java,src\java\org\apache\nutch\tools\compat\ReprUrlFixer.java,True
+src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\RobotRulesParser.java,src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\RobotRulesParser.java,False
+src\java\org\apache\nutch\plugin\Extension.java,src\java\org\apache\nutch\plugin\Extension.java,True
+src\java\org\apache\nutch\util\FSUtils.java,src\java\org\apache\nutch\util\FSUtils.java,True
+Program Files\SciTools\conf\understand\ada\ada95\a-direio.ads,Program Files\SciTools\conf\understand\ada\ada95\a-direio.ads,True
+src\java\org\apache\nutch\parse\OutlinkExtractor.java,src\java\org\apache\nutch\parse\OutlinkExtractor.java,True
+docs\ca\about.html,docs\ca\about.html,True
+docs\ca\help.html,docs\ca\help.html,True
+docs\ca\search.html,docs\ca\search.html,True
+docs\ca\about.html,docs\de\about.html,False
+docs\ca\help.html,docs\de\help.html,False
+docs\ca\search.html,docs\de\search.html,False
+docs\ca\about.html,docs\en\about.html,False
+docs\ca\help.html,docs\en\help.html,False
+docs\ca\search.html,docs\en\search.html,False
+docs\ca\about.html,docs\es\about.html,False
+docs\ca\help.html,docs\es\help.html,False
+docs\ca\search.html,docs\es\search.html,False
+docs\ca\about.html,docs\fi\about.html,False
+docs\ca\help.html,docs\fi\help.html,False
+docs\ca\search.html,docs\fi\search.html,False
+docs\ca\about.html,docs\fr\about.html,False
+docs\ca\help.html,docs\fr\help.html,False
+docs\ca\search.html,docs\fr\search.html,False
+docs\ca\about.html,docs\hu\about.html,False
+docs\ca\help.html,docs\hu\help.html,False
+docs\ca\search.html,docs\hu\search.html,False
+docs\ca\about.html,docs\it\about.html,False
+docs\ca\help.html,docs\it\help.html,False
+docs\ca\search.html,docs\it\search.html,False
+docs\ca\about.html,docs\jp\about.html,False
+docs\ca\help.html,docs\jp\help.html,False
+docs\ca\search.html,docs\jp\search.html,False
+docs\ca\about.html,docs\ms\about.html,False
+docs\ca\help.html,docs\ms\help.html,False
+docs\ca\search.html,docs\ms\search.html,False
+docs\ca\about.html,docs\nl\about.html,False
+docs\ca\help.html,docs\nl\help.html,False
+docs\ca\search.html,docs\nl\search.html,False
+docs\ca\about.html,docs\pl\about.html,False
+docs\ca\help.html,docs\pl\help.html,False
+docs\ca\search.html,docs\pl\search.html,False
+docs\ca\about.html,docs\pt\about.html,False
+docs\ca\help.html,docs\pt\help.html,False
+docs\ca\search.html,docs\pt\search.html,False
+docs\ca\about.html,docs\sh\about.html,False
+docs\ca\help.html,docs\sh\help.html,False
+docs\ca\search.html,docs\sh\search.html,False
+docs\ca\about.html,docs\sr\about.html,False
+docs\ca\help.html,docs\sr\help.html,False
+docs\ca\search.html,docs\sr\search.html,False
+docs\ca\about.html,docs\sv\about.html,False
+docs\ca\help.html,docs\sv\help.html,False
+docs\ca\search.html,docs\sv\search.html,False
+docs\ca\about.html,docs\th\about.html,False
+docs\ca\help.html,docs\th\help.html,False
+docs\ca\search.html,docs\th\search.html,False
+docs\ca\about.html,docs\zh\about.html,False
+docs\ca\help.html,docs\zh\help.html,False
+docs\ca\search.html,docs\zh\search.html,False
+index.html,index.html,True
+docs\ca\about.html,site\about.html,False
+site\bot.html,site\bot.html,False
+site\credits.html,site\credits.html,False
+site\i18n.html,site\i18n.html,False
+index.html,site\index.html,False
+site\issue_tracking.html,site\issue_tracking.html,False
+site\linkmap.html,site\linkmap.html,False
+site\mailing_lists.html,site\mailing_lists.html,False
+site\nightly.html,site\nightly.html,False
+site\skin\basic.css,site\skin\basic.css,True
+site\skin\breadcrumbs-optimized.js,site\skin\breadcrumbs-optimized.js,True
+site\skin\breadcrumbs.js,site\skin\breadcrumbs.js,True
+site\skin\fontsize.js,site\skin\fontsize.js,True
+site\skin\getBlank.js,site\skin\getBlank.js,True
+site\skin\getMenu.js,site\skin\getMenu.js,True
+site\skin\menu.js,site\skin\menu.js,True
+site\skin\print.css,site\skin\print.css,True
+site\skin\profile.css,site\skin\profile.css,True
+site\skin\screen.css,site\skin\screen.css,True
+site\tutorial.html,site\tutorial.html,False
+site\tutorial8.html,site\tutorial8.html,False
+site\version_control.html,site\version_control.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\analysis\package.html,True
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\crawl\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\fetcher\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\indexer\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\metadata\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\plugin\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\searcher\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\java\org\apache\nutch\util\domain\package.html,False
+src\java\overview.html,src\java\overview.html,True
+src\plugin\creativecommons\data\anchor.html,src\plugin\creativecommons\data\anchor.html,True
+src\plugin\creativecommons\data\rdf.html,src\plugin\creativecommons\data\rdf.html,True
+src\plugin\creativecommons\data\rel.html,src\plugin\creativecommons\data\rel.html,True
+src\java\org\apache\nutch\analysis\package.html,src\plugin\creativecommons\src\java\org\creativecommons\nutch\package.html,False
+src\plugin\creativecommons\src\web\include\footer.html,src\plugin\creativecommons\src\web\include\footer.html,True
+src\plugin\creativecommons\src\web\include\header.html,src\plugin\creativecommons\src\web\include\header.html,True
+src\plugin\creativecommons\src\web\include\style.html,src\plugin\creativecommons\src\web\include\style.html,True
+src\java\org\apache\nutch\analysis\package.html,src\plugin\index-anchor\src\java\org\apache\nutch\indexer\anchor\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\index-basic\src\java\org\apache\nutch\indexer\basic\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\index-more\src\java\org\apache\nutch\indexer\more\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\languageidentifier\src\java\org\apache\nutch\analysis\lang\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\lib-http\src\java\org\apache\nutch\protocol\http\api\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\lib-parsems\src\java\org\apache\nutch\parse\ms\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\microformats-reltag\src\java\org\apache\nutch\microformats\reltag\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-html\src\java\org\apache\nutch\parse\html\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-js\src\java\org\apache\nutch\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-msexcel\src\java\org\apache\nutch\parse\msexcel\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-mspowerpoint\src\java\org\apache\nutch\parse\mspowerpoint\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-mspowerpoint\src\test\org\apache\nutch\parse\mspowerpoint\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-msword\src\java\org\apache\nutch\parse\msword\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-pdf\src\java\org\apache\nutch\parse\pdf\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\parse-text\src\java\org\apache\nutch\parse\text\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\protocol-file\src\java\org\apache\nutch\protocol\file\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\protocol-ftp\src\java\org\apache\nutch\protocol\ftp\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\protocol-http\src\java\org\apache\nutch\protocol\http\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\protocol-httpclient\src\java\org\apache\nutch\protocol\httpclient\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\query-more\src\java\org\apache\nutch\searcher\more\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\subcollection\src\java\org\apache\nutch\collection\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\summary-basic\src\java\org\apache\nutch\summary\basic\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\summary-lucene\src\java\org\apache\nutch\summary\lucene\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\tld\src\java\org\apache\nutch\indexer\tld\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\tld\src\java\org\apache\nutch\scoring\tld\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\urlfilter-automaton\src\java\org\apache\nutch\urlfilter\automaton\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\urlfilter-domain\src\java\org\apache\nutch\urlfilter\domain\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\urlfilter-prefix\src\java\org\apache\nutch\urlfilter\prefix\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\urlfilter-regex\src\java\org\apache\nutch\urlfilter\regex\package.html,False
+src\java\org\apache\nutch\analysis\package.html,src\plugin\urlfilter-validator\src\java\org\apache\nutch\urlfilter\validator\package.html,False
+site\skin\breadcrumbs-optimized.js,src\site\src\documentation\skins\common\scripts\breadcrumbs-optimized.js,True
+site\skin\breadcrumbs.js,src\site\src\documentation\skins\common\scripts\breadcrumbs.js,True
+site\skin\fontsize.js,src\site\src\documentation\skins\common\scripts\fontsize.js,True
+site\skin\getBlank.js,src\site\src\documentation\skins\common\scripts\getBlank.js,True
+site\skin\getMenu.js,src\site\src\documentation\skins\common\scripts\getMenu.js,True
+site\skin\menu.js,src\site\src\documentation\skins\common\scripts\menu.js,True
+site\skin\basic.css,src\site\src\documentation\skins\lucene\css\basic.css,True
+site\skin\print.css,src\site\src\documentation\skins\lucene\css\print.css,True
+site\skin\screen.css,src\site\src\documentation\skins\lucene\css\screen.css,True
+src\testresources\fetch-test-site\dup_of_pagea.html,src\testresources\fetch-test-site\dup_of_pagea.html,True
+src\testresources\fetch-test-site\exception.html,src\testresources\fetch-test-site\exception.html,True
+index.html,src\testresources\fetch-test-site\index.html,False
+src\testresources\fetch-test-site\nested_spider_trap.html,src\testresources\fetch-test-site\nested_spider_trap.html,True
+src\testresources\fetch-test-site\pagea.html,src\testresources\fetch-test-site\pagea.html,True
+src\testresources\fetch-test-site\pageb.html,src\testresources\fetch-test-site\pageb.html,True
+src\plugin\creativecommons\src\web\include\footer.html,src\web\include\footer.html,False
+src\plugin\creativecommons\src\web\include\style.html,src\web\include\style.html,False

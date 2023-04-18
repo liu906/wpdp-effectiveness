@@ -1,0 +1,17 @@
+old,new,isSame
+src\test\org\apache\commons\beanutils\priv\PrivateBean.java,src\test\org\apache\commons\beanutils\priv\PrivateBean.java,False
+src\test\org\apache\commons\beanutils\BeanUtilsTestCase.java,src\test\org\apache\commons\beanutils\BeanUtilsTestCase.java,True
+src\test\org\apache\commons\beanutils\TestBeanPackageSubclass.java,src\test\org\apache\commons\beanutils\TestBeanPackageSubclass.java,True
+src\java\org\apache\commons\beanutils\MappedPropertyDescriptor.java,src\java\org\apache\commons\beanutils\MappedPropertyDescriptor.java,False
+src\java\org\apache\commons\beanutils\PropertyUtils.java,src\java\org\apache\commons\beanutils\PropertyUtils.java,False
+src\java\org\apache\commons\beanutils\ConvertUtils.java,src\java\org\apache\commons\beanutils\ConvertUtils.java,True
+src\test\org\apache\commons\beanutils\TestBeanPublicSubclass.java,src\test\org\apache\commons\beanutils\TestBeanPublicSubclass.java,True
+src\test\org\apache\commons\beanutils\TestBean.java,src\test\org\apache\commons\beanutils\TestBean.java,True
+src\java\org\apache\commons\beanutils\BeanUtils.java,src\java\org\apache\commons\beanutils\BeanUtils.java,True
+src\test\org\apache\commons\beanutils\priv\PrivateIndirect.java,src\test\org\apache\commons\beanutils\priv\PrivateIndirect.java,False
+src\test\org\apache\commons\beanutils\priv\PrivateBeanFactory.java,src\test\org\apache\commons\beanutils\priv\PrivateBeanFactory.java,False
+src\test\org\apache\commons\beanutils\PropertyUtilsTestCase.java,src\test\org\apache\commons\beanutils\PropertyUtilsTestCase.java,False
+src\test\org\apache\commons\beanutils\priv\PrivateDirect.java,src\test\org\apache\commons\beanutils\priv\PrivateDirect.java,False
+PROPOSAL.html,PROPOSAL.html,True
+STATUS.html,STATUS.html,True
+src\java\org\apache\commons\beanutils\package.html,src\java\org\apache\commons\beanutils\package.html,True

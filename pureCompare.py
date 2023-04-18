@@ -1,11 +1,19 @@
 import sys
 import os
 import pandas as pd
+import sys
 
-#sys.path.append('/root/scitools/bin/linux64/Python') # 设置PYTHONPATH
+if sys.platform.startswith('linux'):
+    print("running on Linux")
+    sys.path.append('/root/scitools/bin/linux64/Python') # 设置PYTHONPATH
+
+else:
+    print("Running on Windows")
+
 import understand
 import argparse
 print('sciTool Understand version: ', understand.version())
+
 
 def compareFile(old_db, new_db):
     #TODO: check function of compare file
@@ -20,13 +28,24 @@ def compareFile(old_db, new_db):
         # new_longname = new_module.longname()
 
         new_relname = new_module.relname()
-        new_relname_except_root = '/'.join(new_relname.split('/')[1:len(new_relname.split('/'))])
+        new_relname = os.path.normpath(new_relname)
+        new_relname_except_root = os.path.join(*new_relname.split(os.sep)[1:])
+        new_relname_nameOnly = new_relname.split(os.sep)[-1]
+
+        os.path.split(new_relname)
         isFind = False
         idx = 0
         while (not isFind) and (idx < len(old_modules)):
             old_relname = old_modules[idx].relname()
-            old_relname_except_root = '/'.join(old_relname.split('/')[1:len(old_relname.split('/'))])
-            if old_relname_except_root == new_relname_except_root:
+            old_relname = os.path.normpath(old_relname)
+            old_relname_except_root = os.path.join(*old_relname.split(os.sep)[1:])
+            old_relname_nameOnly = old_relname.split(os.sep)[-1]
+
+
+            #if old_relname_except_root == new_relname_except_root:
+            # if the requriment is both filename and path should be equal, then old_relname_except_root == new_relname_except_root
+            # if the requriment is only the filename should be equal, then old_relname_nameOnly == new_relname_nameOnly
+            if old_relname_nameOnly == new_relname_nameOnly:
                 isFind = True
                 break
             idx = idx + 1
@@ -55,14 +74,14 @@ def compareFile(old_db, new_db):
                 new_idx = new_idx + 1
                 old_idx = old_idx + 1
             if (new_idx == len(new_lexemes) and old_idx == len(old_lexemes)):
-                print('####same', new_relname, old_relname)
-                res.loc[len(res.index)] = [new_relname, old_relname, True]
+                #print('####same', old_relname_except_root, new_relname_except_root)
+                res.loc[len(res.index)] = [old_relname_except_root, new_relname_except_root, True]
             else:
-                print('$$$$diff', new_relname, old_relname)
-                res.loc[len(res.index)] = [new_relname, old_relname, False]
+                #print('$$$$diff', old_relname, new_relname)
+                res.loc[len(res.index)] = [old_relname_except_root, new_relname_except_root, False]
         except:
             print('UnableCreateLexer, Skip')
-            print(new_relname, old_relname)
+            print(old_relname, new_relname)
     return res
 
 def compareClass(old_db, new_db):
@@ -106,18 +125,27 @@ def compareClass(old_db, new_db):
                 new_idx = new_idx + 1
                 old_idx = old_idx + 1
             if (new_idx == len(new_lexemes) and old_idx == len(old_lexemes)):
-                print('####same', new_longname, old_longname)
-                res.loc[len(res.index)] = [new_longname, old_longname, True]
+                #print('####same', old_longname, new_longname)
+                res.loc[len(res.index)] = [old_longname, new_longname, True]
             else:
-                print('$$$$diff', new_longname, old_longname)
-                res.loc[len(res.index)] = [new_longname, old_longname, False]
+                #print('$$$$diff', old_longname, new_longname)
+                res.loc[len(res.index)] = [old_longname, new_longname, False]
         except:
             print('UnableCreateLexer, Skip')
-            print(new_longname, old_longname)
+            print(old_longname, new_longname)
     return res
 
 
-def compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type):
+def compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset):
+    res_path = './result/' + dataset
+    resname = res_path + '/' + old_release_name + '_' + new_release_name + '_' + module_type + '.csv'
+    if os.path.exists(resname):
+        return
+    print('process: ', resname)
+    if not os.path.exists(res_path):
+        os.makedirs(res_path)
+        print("create result dir")
+
     old_db = understand.open(old_udb_path)
     new_db = understand.open(new_udb_path)
 
@@ -127,12 +155,7 @@ def compare(old_udb_path, new_udb_path, old_release_name, new_release_name, modu
         res = compareClass(old_db, new_db)
     old_db.close()
     new_db.close()
-
-    res_path = './result'
-    if not os.path.exists(res_path):
-        os.makedirs(res_path)
-        print("create result dir")
-    res.to_csv(res_path + '/' + old_release_name + '_' + new_release_name + '_' + module_type + '.csv', index=False)
+    res.to_csv(resname, index=False)
 
 
 def test():
@@ -153,6 +176,7 @@ if __name__ == '__main__':
     parser.add_argument("old_release_name", help='the name of old release')
     parser.add_argument("new_release_name", help='the name of new release')
     parser.add_argument("module_type", help='the module type to be analyzed, file or class')
+    parser.add_argument("dataset", help='dataset name')
 
     args = parser.parse_args()
     old_udb_path = args.old_udb_path
@@ -160,5 +184,6 @@ if __name__ == '__main__':
     old_release_name = args.old_release_name
     new_release_name = args.new_release_name
     module_type = args.module_type
-    compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type)
+    dataset = args.dataset
+    compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset)
 
