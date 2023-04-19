@@ -1,0 +1,17 @@
+old,new,isSame
+org.apache.commons.jexl.Expression,org.apache.commons.jexl.Expression,False
+org.apache.commons.jexl.Script,org.apache.commons.jexl.Script,False
+org.apache.commons.jexl.JexlContext,org.apache.commons.jexl.JexlContext,False
+org.apache.commons.jexl.ScriptFactory,org.apache.commons.jexl.ScriptFactory,False
+org.apache.commons.jexl.ScriptTest,org.apache.commons.jexl.ScriptTest,False
+org.apache.commons.jexl.JexlHelper,org.apache.commons.jexl.JexlHelper,True
+org.apache.commons.jexl.ExpressionFactory,org.apache.commons.jexl.ExpressionFactory,False
+org.apache.commons.jexl.ScriptTest,org.apache.commons.jexl.ScriptTest,False
+org.apache.commons.jexl.ScriptFactory,org.apache.commons.jexl.ScriptFactory,False
+org.apache.commons.jexl.context.HashMapContext,org.apache.commons.jexl.context.HashMapContext,False
+org.apache.commons.jexl.ExpressionFactory,org.apache.commons.jexl.ExpressionFactory,False
+org.apache.commons.jexl.Script,org.apache.commons.jexl.Script,False
+org.apache.commons.jexl.JexlContext,org.apache.commons.jexl.JexlContext,False
+org.apache.commons.jexl.JexlHelper,org.apache.commons.jexl.JexlHelper,True
+org.apache.commons.jexl.context.HashMapContext,org.apache.commons.jexl.context.HashMapContext,False
+org.apache.commons.jexl.Expression,org.apache.commons.jexl.Expression,False

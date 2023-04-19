@@ -85,10 +85,11 @@ pipe_KNN10ns = make_pipeline(
 #     KNeighborsClassifier(n_neighbors=10)
 # )
 
-LABEL = ["defective"]
-DROPS = ["Project", "Class", "bugs"]
+# LABEL = ["defective"]
+LABEL = ["bug"]
+DROPS = ["Project", "Class", "bugs", "type","bug_density"]
 SLOC = ["loc"]
-IDs = ["Class"]
+IDs = ["relName"]
 
 
 model_dict = {'LR': pipe_LR,
@@ -170,10 +171,16 @@ def testDiffTrain(train_data, test_data, diff_data):
 
     list_IDs_test = [item.replace('$', '.') for item in list_IDs_test]
     list_IDs_train = [item.replace('$', '.') for item in list_IDs_train]
-
+    temp = set(list_IDs_test).intersection(set(list_IDs_train))
     df_same_modules = diff_data.loc[diff_data['isSame'] == True]
+    pd.options.mode.chained_assignment = None
+    df_same_modules['old'] = [item.replace('\\', '/') for item in df_same_modules['old']]
+    df_same_modules['new'] = [item.replace('\\', '/') for item in df_same_modules['new']]
+
     list_same_id = df_same_modules['old'].tolist()
-    list_same_id_in_dataset = set(list_same_id).intersection(set(list_IDs_test)).intersection(set(list_IDs_train))
+    bool_result = [any(substring in b for b in list_same_id) for substring in temp]
+    list_same_id_in_dataset = set([x for x, b in zip(temp, bool_result) if b])
+    # list_same_id_in_dataset = set(list_same_id).intersection(set(list_IDs_test)).intersection(set(list_IDs_train))
 
 
     same_id_index_test = []
@@ -223,15 +230,22 @@ def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_i
 
     for idx, row in df_path_config.iterrows():
         train_path = row['train_path']
+        print(train_path)
         test_path = row['test_path']
         diff_path = row['diff_path']
+        dataset = row['dataset']
+        project = row['project']
         train_data = pd.read_csv(train_path)
         test_data = pd.read_csv(test_path)
         diff_data = pd.read_csv(diff_path)
-        test_data_without_dup,len_list_same_id, len_list_same_id_in_dataset, tp, fp, tn, fn = testDiffTrain(train_data, test_data, diff_data)
-        Path("./data_new").mkdir(parents=True, exist_ok=True)
+        if dataset == 'Metrics-Repo-2010':
+            global IDs
+            IDs = ['className']
 
-        test_path_diffToPreviousRelease = './data_new/'+'diffToPreviousRelease_'+test_path.split('/')[-1]
+        test_data_without_dup, len_list_same_id, len_list_same_id_in_dataset, tp, fp, tn, fn = testDiffTrain(train_data, test_data, diff_data)
+        Path("./dataset/data_new/"+dataset+'/'+project).mkdir(parents=True, exist_ok=True)
+
+        test_path_diffToPreviousRelease = './dataset/data_new/' + dataset + '/' + project + '/diffToPreviousRelease_' + test_path.split('/')[-1]
         test_data_without_dup.to_csv(test_path_diffToPreviousRelease, index=False)
 
         list_path_config_diffData.append([train_path, test_path_diffToPreviousRelease])
@@ -247,9 +261,9 @@ def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_i
 
 
 def test():
-    config_path = './script/path_config_jureczko.csv'
-    config_path_diffToPreviousRelease = './script/path_config_jureczko_diffToPreviousRelease.csv'
-    dataset_diff_info = './result/jureczko_diff_info.csv'
+    config_path = './script/dataset_config.csv'
+    config_path_diffToPreviousRelease = './script/dataset_config_diffToPreviousRelease.csv'
+    dataset_diff_info = './script/dataset_diff_info.csv'
     get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_info)
 
 
@@ -267,6 +281,8 @@ def run_model_by_config_path(data_split_config_path,data_set_column_config,datas
         train_path = row['train_path']
         test_path = row['test_path']
         train_data = pd.read_csv(train_path)
+        if test_path=='./data_new/diffToPreviousRelease_ant_1.4.csv':
+            print('stop')
         test_data = pd.read_csv(test_path)
 
         if(sum(train_data[LABEL].values)==0):
@@ -291,11 +307,12 @@ def run():
                                  dataset='jureczko',
                                  modelName=modelName)
 
-flat_test = False
+flat_test = True
 flag_run_all = True
 if __name__ == '__main__':
     if flat_test:
         test()
+        exit(0)
 
     if flag_run_all:
         run()

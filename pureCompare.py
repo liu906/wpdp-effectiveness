@@ -137,7 +137,7 @@ def compareClass(old_db, new_db):
 
 
 def compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset):
-    res_path = './result/' + dataset
+    res_path = './dataset/diff/' + dataset
     resname = res_path + '/' + old_release_name + '_' + new_release_name + '_' + module_type + '.csv'
     if os.path.exists(resname):
         return
