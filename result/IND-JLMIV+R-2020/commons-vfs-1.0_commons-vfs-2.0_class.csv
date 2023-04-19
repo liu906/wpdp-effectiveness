@@ -1,4 +1,0 @@
-old,new,isSame
-org.apache.commons.AbstractVfsTestCase,org.apache.commons.AbstractVfsTestCase,False
-code.ClassToLoad,code.ClassToLoad,False
-code.sealed.AnotherClass,code.sealed.AnotherClass,True
