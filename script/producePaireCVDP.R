@@ -36,8 +36,8 @@ res$command <- apply(res, 1, function(row) {
 })
 
 
-write.csv(paste(res$command,res$dataset),file='script/compareByUdb.sh',quote = F,row.names = F)
-
+write.csv(paste(res$command,res$dataset),file='script/compareByUdb.bat',quote = F,row.names = F)
+write.csv(paste(res$command,res$dataset),file='script/compareByUdb_file.bat',quote = F,row.names = F)
 
 
 root <- 'dataset/original/'
@@ -46,7 +46,7 @@ datasets <- list.files(root)
 
 first_flag <- T
 for (dataset in datasets) {
-  if(dataset=='ECLIPSE-2007'){
+  if(dataset=='Metrics-Repo-2010'){
     module_type='class'
   }else{
     module_type='file'

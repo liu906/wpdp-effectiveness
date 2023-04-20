@@ -1,4 +1,11 @@
-datasetName,rootPath,label,drops,sloc,ids,res_folder
-jureczko,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/,defective,Project Class bugs,loc,Project Class,JURECZKO_result
-ELFF_class,./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/,Defective,Class Package NumberOfDefects,nloc,Class Package,ELFF_class_result
-ELFF_method,./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/,DEFECTIVE,Class Package Method SEQUENCE FLAG,NLOC,Class Package Method,ELFF_Method_result
+dataset,rootPath,label,drops,sloc,ids
+jureczko,./cross-version-instance-overlap/JURECZKO/data_preprocessed_selected/,defective,Project Class bugs,loc,Project Class
+ELFF_class,./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/,Defective,Class Package NumberOfDefects,nloc,Class Package
+ELFF_method,./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/,DEFECTIVE,Class Package Method SEQUENCE FLAG,NLOC,Class Package Method
+ECLIPSE-2007,,bug,relName bugDensity type,loc,relName
+IND-JLMIV+R-2020,,bug,relName bugDensity type,loc,relName
+JIRA-HA-2019,,bug,relName bugDensity type,CountLineCodeExe,relName
+JIRA-RA-2019,,bug,relName bugDensity type,CountLineCodeExe,relName
+MA-SZZ-2020,,bug,relName bugDensity type,loc,relName
+Metrics-Repo-2010,,bug,className bugDensity type,loc,className
+

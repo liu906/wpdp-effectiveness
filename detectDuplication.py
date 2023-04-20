@@ -1,13 +1,14 @@
 import pandas as pd
 import os
 import numpy as np
+
 import logging
 from pathlib import Path
 
 logging.basicConfig(level=logging.DEBUG, filename='./log', format='%(asctime)s:%(levelname)s:%(message)s')
 
 IDs = ["relName"]
-
+LABEL = ["bug"]
 
 def testDiffTrain(train_data, test_data, diff_data):
     if len(IDs) > 1:
@@ -97,7 +98,7 @@ def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_i
         test_path_diffToPreviousRelease = './dataset/data_new/' + dataset + '/' + project + '/diffToPreviousRelease_' + test_path.split('/')[-1]
         test_data_without_dup.to_csv(test_path_diffToPreviousRelease, index=False)
 
-        list_path_config_diffData.append([train_path, test_path_diffToPreviousRelease])
+        list_path_config_diffData.append([dataset, project, train_path, test_path_diffToPreviousRelease])
 
         res_list.append(
             [train_path, test_path, test_data.shape[0], len_list_same_id, len_list_same_id_in_dataset, tp, fp, tn, fn])
@@ -105,7 +106,7 @@ def get_diff_data(config_path, config_path_diffToPreviousRelease, dataset_diff_i
     res_df = pd.DataFrame(res_list, columns=['train_path', 'test_path', 'nrow_test_data', 'len_same_id_in_source_code',
                                              'len_same_id_in_dataset', 'tp', 'fp', 'tn', 'fn'])
     res_df.to_csv(dataset_diff_info, index=False)
-    df_path_config_diffData = pd.DataFrame(list_path_config_diffData, columns=['train_path', 'test_path'])
+    df_path_config_diffData = pd.DataFrame(list_path_config_diffData, columns=['dataset', 'project', 'train_path', 'test_path'])
     df_path_config_diffData.to_csv(config_path_diffToPreviousRelease, index=False)
 
 
