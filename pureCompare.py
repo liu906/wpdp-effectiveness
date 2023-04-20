@@ -1,8 +1,10 @@
+"""
+compare two udb file
+"""
 import sys
 import os
 import pandas as pd
 import sys
-
 if sys.platform.startswith('linux'):
     print("running on Linux")
     sys.path.append('/root/scitools/bin/linux64/Python') # 设置PYTHONPATH
