@@ -162,22 +162,12 @@ summaryPerformance2 <- function(root_path,threshold,mode){
   
   for(file in files){
     cat(file,'\n')
-    data <- read.csv(file=paste(root_path,file,sep = ''),stringsAsFactors=FALSE)
-  
-    
-    data[data$predictLabel=='False','predictLabel'] = 0
-    data[data$predictLabel=='True','predictLabel'] = 1
-    data[data$actualBugLabel=='False','actualBugLabel'] = 0
-    data[data$actualBugLabel=='True','actualBugLabel'] = 1
-    
-    data$predictedValue <- as.numeric(data$predictedValue)
-    data$predictLabel <- as.numeric(data$predictLabel)
-    data$actualBugLabel <- as.numeric(data$actualBugLabel)
-    
+    data <- read.csv(file=file.path(root_path,file,sep = ''))
     perfs <- calculateIndicator(data,threshold = threshold)
     community <- strsplit(file,split = '-')[[1]][1]
     source <- strsplit(file,split = '_')[[1]][1]
     target <- strsplit(file,split = '_')[[1]][2]
+    
     total_res[nrow(total_res)+1,] <- c(community,source,target,perfs)
   }
   if(mode=='SSC'){

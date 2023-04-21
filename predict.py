@@ -22,7 +22,7 @@ import os
 import numpy as np
 import logging
 from pathlib import Path
-import concurrent.futures
+# import concurrent.futures
 logging.basicConfig(level=logging.DEBUG, filename='./log', format='%(asctime)s:%(levelname)s:%(message)s')
 
 from autogluon.tabular import TabularDataset, TabularPredictor
@@ -77,14 +77,22 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
     X_train = train_data.drop(LABEL, axis=1)
     X_test = test_data.drop(LABEL, axis=1)
     sloc = X_test[SLOC].values.ravel()
+    feature_importance = 0
     if model == 'autogluon':
         train_data = TabularDataset(train_data)
         auto_predictor = TabularPredictor(label=LABEL).fit(train_data, verbosity=2)
         # 捕获Autogluon打印的信息
         # output = auto_predictor.fit_summary()
         # # 将信息写入CSV文件
-        # feature_importance = auto_predictor.feature_importance(train_data)
-        # print(feature_importance)
+        feature_importance = auto_predictor.feature_importance(train_data)
+        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+        print(feature_importance)
+
+        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+        # feature_importance.to_csv('feature_importance.csv', index=False)
+
+        # feature_importance.to_csv('feature_importance.csv', index=False, mode='a')
+        # logging.DEBUG(feature_importance)
         # with open('autogluon_info.csv', 'w') as f:
         #     f.write(output)
 
@@ -114,7 +122,7 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
         print('accuracy: ', accuracy_score(pipe.predict(X_test), y_test))
         print('recall: ', recall_score(pipe.predict(X_test), y_test))
         print('f1: ', f1_score(pipe.predict(X_test), y_test))
-    return id_test
+    return id_test, feature_importance
 
 
 def newIsBuggy(train_data, test_data, IDs):
@@ -159,21 +167,24 @@ def predict_by_row(row, df_column_config,modelName):
 
     if (sum(train_data[LABEL].values) == 0):
         print("cannot train the prediction model because no buggy instance in training file'")
-        return 0
+
     else:
         try:
-            prediction_result_df = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC)
-            print('over!!!!!!!!!!!!')
+            prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC)
+            prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
+            if modelName == 'autogluon':
+                feature_importance['train_path'] = train_path
+                feature_importance['test_path'] = test_path
+                feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
         except ValueError as e:
             # handle the exception raised from bar()
             print(f"An error occurred predicting: {e}")
-            return 0
 
 
-    print('%%%%%%%%%%%%%%%%%%%%%%%%',os.path.join(prediction_result_path, res_file_name))
-    prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
 
-    return 1
+
+
+
 
 
 
@@ -181,15 +192,15 @@ def run_model_by_config_path(data_split_config_path, data_set_column_config, mod
     df_config = pd.read_csv(data_split_config_path)
     df_column_config = pd.read_csv(data_set_column_config, index_col=0)
 
-    # for idx, row in df_config.iterrows():
-    #    predict_by_row(row,df_column_config)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
-        # 将 DataFrame 中的每一行提交给线程池处理
-        futures = [executor.submit(predict_by_row, row, df_column_config, modelName) for index, row in df_config.iterrows()]
-        # 等待所有线程完成并获取结果
-        results = [f.result() for f in concurrent.futures.as_completed(futures)]
-
-    print(results)
+    for idx, row in df_config.iterrows():
+       predict_by_row(row, df_column_config, modelName)
+    # with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
+    #     # 将 DataFrame 中的每一行提交给线程池处理
+    #     futures = [executor.submit(predict_by_row, row, df_column_config, modelName) for index, row in df_config.iterrows()]
+    #     # 等待所有线程完成并获取结果
+    #     results = [f.result() for f in concurrent.futures.as_completed(futures)]
+    #
+    # print(results)
 
 
 def run():
