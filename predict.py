@@ -27,6 +27,7 @@ logging.basicConfig(level=logging.DEBUG, filename='./log', format='%(asctime)s:%
 
 from autogluon.tabular import TabularDataset, TabularPredictor
 
+
 # create a pipeline object
 pipe_LR = make_pipeline(
     StandardScaler(),
@@ -80,7 +81,10 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
     feature_importance = 0
     if model == 'autogluon':
         train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL).fit(train_data, verbosity=2)
+        auto_predictor = TabularPredictor(label=LABEL).fit(train_data,
+                                                           verbosity=2,
+                                                           hyperparameters={'use_gpu': True})
+
         # 捕获Autogluon打印的信息
         # output = auto_predictor.fit_summary()
         # # 将信息写入CSV文件
@@ -102,6 +106,19 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
 
         id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
         # print(id_test)
+    elif model == 'autogluon_best':
+        train_data = TabularDataset(train_data)
+        auto_predictor = TabularPredictor(label=LABEL).fit(train_data, verbosity=2, presets='best_quality')
+
+        feature_importance = auto_predictor.feature_importance(train_data)
+
+
+        test_data = TabularDataset(test_data)
+        preds = auto_predictor.predict(test_data)
+        proba = auto_predictor.predict_proba(test_data)[1]
+
+        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
+
 
     else:
         pipe = model_dict[model]
@@ -172,7 +189,7 @@ def predict_by_row(row, df_column_config,modelName):
         try:
             prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC)
             prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
-            if modelName == 'autogluon':
+            if modelName == 'autogluon' or modelName == 'autogluon_best':
                 feature_importance['train_path'] = train_path
                 feature_importance['test_path'] = test_path
                 feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
@@ -205,7 +222,7 @@ def run_model_by_config_path(data_split_config_path, data_set_column_config, mod
 
 def run():
     # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
-    modelNames = ['autogluon']
+    modelNames = ['autogluon_best']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',

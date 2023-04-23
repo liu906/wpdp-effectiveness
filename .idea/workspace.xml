@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e16551c-7fb4-4278-8708-3d58a6151c41" name="Changes" comment="continue my work on winPC">
-      <change afterPath="$PROJECT_DIR$/detectDuplication.py" afterDir="false" />
+    <list default="true" id="7e16551c-7fb4-4278-8708-3d58a6151c41" name="Changes" comment="split main.py to two functional files">
+      <change beforePath="$PROJECT_DIR$/.idea/cross-version.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cross-version.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pureCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/pureCompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autogluon_info.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_importance.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/getPerformanceForSSCSNM.R" beforeDir="false" afterPath="$PROJECT_DIR$/script/getPerformanceForSSCSNM.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/getPerformanceForSSCSNM1.r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/getPerformanceForSSCSNM10.r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/getPerformanceForSSCSNM20.r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/getPerformanceForSSCSNM5.r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/predictByRule.r" beforeDir="false" afterPath="$PROJECT_DIR$/script/predictByRule.r" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/temp.r" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +70,7 @@
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.predict">
     <configuration name="compare" type="PythonConfigurationType" factoryName="Python">
       <module name="cross-version" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,6 +92,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="detectDuplication" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cross-version" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detectDuplication.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main without parameter" type="PythonConfigurationType" factoryName="Python">
       <module name="cross-version" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +125,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\work\cpdp-effectiveness\predict.py" />
       <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,19 +134,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="cross-version" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\KalifaRyu\miniconda3\envs\myenv\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
       <option name="PARAMETERS" value="./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.1_ClassLevelMetrics.csv  ./cross-version-instance-overlap/ESEM2016-master/ClassLevel_processed/cdk/cdk1.2_ClassLevelMetrics.csv --result-path ./result/KNN10/ELFF_class_result/ --drops &quot;Class Package NumberOfDefects&quot; --sloc nloc --ids &quot;Class Package&quot; --label Defective --model KNN10" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,7 +206,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in main.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in predict.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="cross-version" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -185,23 +216,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/main.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/predict.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.predict" />
       <item itemvalue="Python.compare" />
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.main without parameter" />
+      <item itemvalue="Python.detectDuplication" />
       <item itemvalue="Python.pureCompare" />
-      <item itemvalue="Python tests.Python tests in main.py" />
+      <item itemvalue="Python tests.Python tests in predict.py" />
       <item itemvalue="Shell Script.cpdp_KNN10" />
       <item itemvalue="Shell Script.cpdp_KNN10.sh" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.detectDuplication" />
         <item itemvalue="Python.pureCompare" />
-        <item itemvalue="Python tests.Python tests in main.py" />
+        <item itemvalue="Python tests.Python tests in predict.py" />
         <item itemvalue="Shell Script.cpdp_KNN10.sh" />
       </list>
     </recent_temporary>
@@ -222,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681659576900</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="split main.py to two functional files">
+      <created>1681976969396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681976969396</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -241,7 +281,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="continue my work on winPC" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue my work on winPC" />
+    <MESSAGE value="split main.py to two functional files" />
+    <option name="LAST_COMMIT_MESSAGE" value="split main.py to two functional files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -297,59 +338,14 @@
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>257</line>
-          <option name="timeStamp" value="69" />
+          <url>file://$PROJECT_DIR$/predict.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>255</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>259</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>285</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>284</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>248</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>237</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>179</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>174</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>176</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>208</line>
-          <option name="timeStamp" value="81" />
+          <url>file://$PROJECT_DIR$/predict.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

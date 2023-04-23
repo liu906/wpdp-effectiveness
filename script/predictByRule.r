@@ -1,6 +1,5 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
-# install.packages('sqldf')
 library(gtools)
 require(sqldf)
 
