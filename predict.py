@@ -82,8 +82,8 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
     if model == 'autogluon':
         train_data = TabularDataset(train_data)
         auto_predictor = TabularPredictor(label=LABEL).fit(train_data,
-                                                           verbosity=2,
-                                                           hyperparameters={'use_gpu': True})
+                                                           verbosity=2
+                                                           )
 
         # 捕获Autogluon打印的信息
         # output = auto_predictor.fit_summary()
@@ -118,7 +118,39 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
         proba = auto_predictor.predict_proba(test_data)[1]
 
         id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
+    elif model == 'autogluon_best_recall':
+        train_data = TabularDataset(train_data)
+        auto_predictor = TabularPredictor(label=LABEL, eval_metric='recall').fit(train_data,
+                                                           verbosity=2,
+                                                           presets='best_quality'
+                                                           )
 
+        feature_importance = auto_predictor.feature_importance(train_data)
+
+        test_data = TabularDataset(test_data)
+        preds = auto_predictor.predict(test_data)
+        proba = auto_predictor.predict_proba(test_data)[1]
+
+        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
+    elif model == 'autogluon_best_recall':
+        train_data = TabularDataset(train_data)
+        auto_predictor = TabularPredictor(label=LABEL, eval_metric='recall').fit(train_data,
+                                                           verbosity=2,
+                                                           presets='best_quality'
+                                                           )
+    elif model == 'autogluon_best_f1':
+        train_data = TabularDataset(train_data)
+        auto_predictor = TabularPredictor(label=LABEL, eval_metric='f1').fit(train_data,
+                                                                                 verbosity=2,
+                                                                                 presets='best_quality'
+                                                                                 )
+        feature_importance = auto_predictor.feature_importance(train_data)
+
+        test_data = TabularDataset(test_data)
+        preds = auto_predictor.predict(test_data)
+        proba = auto_predictor.predict_proba(test_data)[1]
+
+        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
 
     else:
         pipe = model_dict[model]
@@ -189,7 +221,7 @@ def predict_by_row(row, df_column_config,modelName):
         try:
             prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC)
             prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
-            if modelName == 'autogluon' or modelName == 'autogluon_best':
+            if modelName == 'autogluon' or modelName == 'autogluon_best' or modelName=='autogluon_best_recall'or modelName=='autogluon_best_f1':
                 feature_importance['train_path'] = train_path
                 feature_importance['test_path'] = test_path
                 feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
@@ -211,18 +243,12 @@ def run_model_by_config_path(data_split_config_path, data_set_column_config, mod
 
     for idx, row in df_config.iterrows():
        predict_by_row(row, df_column_config, modelName)
-    # with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
-    #     # 将 DataFrame 中的每一行提交给线程池处理
-    #     futures = [executor.submit(predict_by_row, row, df_column_config, modelName) for index, row in df_config.iterrows()]
-    #     # 等待所有线程完成并获取结果
-    #     results = [f.result() for f in concurrent.futures.as_completed(futures)]
-    #
-    # print(results)
+
 
 
 def run():
     # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
-    modelNames = ['autogluon_best']
+    modelNames = ['autogluon_best_f1']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',

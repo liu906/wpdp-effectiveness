@@ -3,16 +3,20 @@ getwd()
 source("../../MATTER/performance.r")
 library(dplyr)
 prediction_result_path <- ('../prediction_result/')
-models <- c('autogluon','KNN','LR','NB','RF','SVM')
+# models <- c('autogluon','KNN','LR','NB','RF','SVM')
+models <- c('autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
 indicators <- c('recall','f1','g1','ifap2','roi_tp','acc')
-thresholds = c(20,0.2)
+thresholds = c(20,0.2,-1)
 for (model in models) {
   datasets <- list.files(file.path(prediction_result_path,model))
   for (dataset in datasets) {
     root_path <- file.path(prediction_result_path,model,dataset)
     
     for (threshold in thresholds) {
-      if(threshold<1){
+      if(threshold==-1){
+        mode = 'default'
+      }
+      else if(threshold<1){
         mode = 'SNM'
       }else{
         mode = 'SSC'
@@ -46,7 +50,10 @@ for (dataset in datasets) {
   root_path <- file.path(prediction_result_path,model,dataset)
   
   for (threshold in thresholds) {
-    if(threshold<1){
+    if(threshold==-1){
+      mode = 'default'
+    }
+    else if(threshold<1){
       mode = 'SNM'
     }else{
       mode = 'SSC'
@@ -92,7 +99,10 @@ for (dataset in datasets) {
   
   
   for (threshold in thresholds) {
-    if(threshold<1){
+    if(threshold==-1){
+      mode = 'default'
+    }
+    else if(threshold<1){
       mode = 'SNM'
     }else{
       mode = 'SSC'
@@ -224,6 +234,9 @@ for (threshold in thresholds) {
 
 class(total_two_level)
 total_two_level <- total_two_level[order(total_two_level$threshold,total_two_level$indicator),]
+total_two_level <- cbind(total_two_level[,1:3],data.frame(lapply(total_two_level[,models],as.integer)))
 
+res_path <- '../performance/two_level_skESD_result.csv'
+write.csv(total_two_level,res_path,row.names = F,quote = F)
 
 
