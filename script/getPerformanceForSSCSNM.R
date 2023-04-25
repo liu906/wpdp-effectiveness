@@ -4,7 +4,7 @@ source("../../MATTER/performance.r")
 library(dplyr)
 prediction_result_path <- ('../prediction_result/')
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
-models <- c('autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
+models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
 indicators <- c('recall','f1','g1','ifap2','roi_tp','acc')
 thresholds = c(20,0.2,-1)
 for (model in models) {
@@ -168,7 +168,10 @@ for (dataset in datasets) {
   
   
   for (threshold in thresholds) {
-    if(threshold<1){
+    if(threshold==-1){
+      mode = 'default'
+    }
+    else if(threshold<1){
       mode = 'SNM'
     }else{
       mode = 'SSC'
@@ -203,9 +206,6 @@ for (dataset in datasets) {
        
      }
     }
-    
-    
-
     
   }
 }
