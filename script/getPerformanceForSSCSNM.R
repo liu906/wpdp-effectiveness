@@ -5,8 +5,11 @@ library(dplyr)
 prediction_result_path <- ('../prediction_result/')
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
 models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
-indicators <- c('recall','f1','g1','ifap2','roi_tp','acc')
-thresholds = c(20,0.2,-1)
+indicators <- c('recall','f1','g1','ifap2','roi_tp','acc','tp','fp','tn','fn','precision','auc_roc')
+
+
+thresholds = c(20,0.2,-1,0.1,10,0.5,5)
+
 for (model in models) {
   datasets <- list.files(file.path(prediction_result_path,model))
   for (dataset in datasets) {
