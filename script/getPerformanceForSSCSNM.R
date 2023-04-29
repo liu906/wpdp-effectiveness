@@ -18,6 +18,7 @@ for (model in models) {
     for (threshold in thresholds) {
       if(threshold==-1){
         mode = 'default'
+        
       }
       else if(threshold<1){
         mode = 'SNM'

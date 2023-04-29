@@ -7,6 +7,7 @@ Logistic regression (LR) done
 auto-gloun
 """
 from tqdm import tqdm
+from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
@@ -67,89 +68,50 @@ def getFeatures(train_data, test_data, feature_type, DROPS):
     return train_data, test_data
 
 
-def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC):
+def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC,flag_resample):
 
 
     id_train = train_data[IDs]
     id_test = test_data[IDs]
     train_data, test_data = getFeatures(train_data, test_data, feature_type='metric', DROPS=DROPS)
+
+
     y_train = train_data[LABEL].values
     y_test = test_data[LABEL].values
     X_train = train_data.drop(LABEL, axis=1)
     X_test = test_data.drop(LABEL, axis=1)
     sloc = X_test[SLOC].values.ravel()
+    if flag_resample:
+        sm = SMOTE(random_state=42)
+        X_train, y_train = sm.fit_resample(X_train, y_train)
+        train_data = X_train
+        train_data[LABEL] = y_train
+
+
     feature_importance = 0
-    if model == 'autogluon':
+
+    if 'autogluon' in model:
+        if model == 'autogluon':
+            metric = 'accuracy'
+            presets = 'default'
+        elif model == 'autogluon_best':
+            metric = 'accuracy'
+            presets = 'best_quality'
+        elif model == 'autogluon_best_recall':
+            metric = 'recall'
+            presets = 'best_quality'
+        elif model == 'autogluon_best_f1':
+            metric = 'f1'
+            presets = 'best_quality'
+
         train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL).fit(train_data,
-                                                           verbosity=2
-                                                           )
 
-        # 捕获Autogluon打印的信息
-        # output = auto_predictor.fit_summary()
-        # # 将信息写入CSV文件
-        feature_importance = auto_predictor.feature_importance(train_data)
-        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-        print(feature_importance)
+        auto_predictor = TabularPredictor(label=LABEL, eval_metric=metric).fit(train_data, verbosity=2, presets=presets)
 
-        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-        # feature_importance.to_csv('feature_importance.csv', index=False)
-
-        # feature_importance.to_csv('feature_importance.csv', index=False, mode='a')
-        # logging.DEBUG(feature_importance)
-        # with open('autogluon_info.csv', 'w') as f:
-        #     f.write(output)
-
+        # feature_importance = auto_predictor.feature_importance(train_data)
         test_data = TabularDataset(test_data)
         preds = auto_predictor.predict(test_data)
         proba = auto_predictor.predict_proba(test_data)[1]
-
-        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
-        # print(id_test)
-    elif model == 'autogluon_best':
-        train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL).fit(train_data, verbosity=2, presets='best_quality')
-
-        feature_importance = auto_predictor.feature_importance(train_data)
-
-
-        test_data = TabularDataset(test_data)
-        preds = auto_predictor.predict(test_data)
-        proba = auto_predictor.predict_proba(test_data)[1]
-
-        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
-    elif model == 'autogluon_best_recall':
-        train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL, eval_metric='recall').fit(train_data,
-                                                           verbosity=2,
-                                                           presets='best_quality'
-                                                           )
-
-        feature_importance = auto_predictor.feature_importance(train_data)
-
-        test_data = TabularDataset(test_data)
-        preds = auto_predictor.predict(test_data)
-        proba = auto_predictor.predict_proba(test_data)[1]
-
-        id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
-    elif model == 'autogluon_best_recall':
-        train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL, eval_metric='recall').fit(train_data,
-                                                           verbosity=2,
-                                                           presets='best_quality'
-                                                           )
-    elif model == 'autogluon_best_f1':
-        train_data = TabularDataset(train_data)
-        auto_predictor = TabularPredictor(label=LABEL, eval_metric='f1').fit(train_data,
-                                                                                 verbosity=2,
-                                                                                 presets='best_quality'
-                                                                                 )
-        feature_importance = auto_predictor.feature_importance(train_data)
-
-        test_data = TabularDataset(test_data)
-        preds = auto_predictor.predict(test_data)
-        proba = auto_predictor.predict_proba(test_data)[1]
-
         id_test = id_test.assign(sloc=sloc, predictLabel=preds, predictedValue=proba, actualBugLabel=y_test.ravel())
 
     else:
@@ -190,12 +152,12 @@ def newIsBuggy(train_data, test_data, IDs):
 
     return temp
 
-def predict_by_row(row, df_column_config,modelName):
+def predict_by_row(row, df_column_config,modelName,flag_resample,prediction_result_path):
     dataset = row['dataset']
     project = row['project']
     train_path = row['train_path']
     test_path = row['test_path']
-    prediction_result_path = os.path.join('prediction_result', modelName, dataset)
+    prediction_result_path = os.path.join(prediction_result_path, modelName, dataset)
     if not os.path.exists(prediction_result_path):
         Path(prediction_result_path).mkdir(parents=True, exist_ok=True)
 
@@ -219,12 +181,12 @@ def predict_by_row(row, df_column_config,modelName):
 
     else:
         try:
-            prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC)
+            prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC,flag_resample)
             prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
-            if modelName == 'autogluon' or modelName == 'autogluon_best' or modelName=='autogluon_best_recall'or modelName=='autogluon_best_f1':
-                feature_importance['train_path'] = train_path
-                feature_importance['test_path'] = test_path
-                feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
+            # if modelName == 'autogluon' or modelName == 'autogluon_best' or modelName=='autogluon_best_recall'or modelName=='autogluon_best_f1':
+            #     feature_importance['train_path'] = train_path
+            #     feature_importance['test_path'] = test_path
+            #     feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
         except ValueError as e:
             # handle the exception raised from bar()
             print(f"An error occurred predicting: {e}")
@@ -237,32 +199,41 @@ def predict_by_row(row, df_column_config,modelName):
 
 
 
-def run_model_by_config_path(data_split_config_path, data_set_column_config, modelName):
+def run_model_by_config_path(data_split_config_path, data_set_column_config, modelName,flag_resample,prediction_result_path):
     df_config = pd.read_csv(data_split_config_path)
     df_column_config = pd.read_csv(data_set_column_config, index_col=0)
 
     for idx, row in df_config.iterrows():
-       predict_by_row(row, df_column_config, modelName)
+       predict_by_row(row, df_column_config, modelName, flag_resample, prediction_result_path)
 
 
 
-def run():
+def run(flag_resample):
+    if not flag_resample:
+        prediction_result_path = 'prediction_result'
+    else:
+        prediction_result_path = 'prediction_result_resample'
+
     # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
     modelNames = ['autogluon_best_f1']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',
                                  data_set_column_config='./script/dataset_column_config.csv',
-                                 modelName=modelName)
+                                 modelName=modelName,
+                                 flag_resample=flag_resample,
+                                 prediction_result_path=prediction_result_path)
         run_model_by_config_path(data_split_config_path='./script/dataset_config_diffToPreviousRelease.csv',
                                  data_set_column_config='./script/dataset_column_config.csv',
-                                 modelName=modelName)
+                                 modelName=modelName,
+                                 flag_resample=flag_resample,
+                                 prediction_result_path=prediction_result_path)
 
 
 flag_run_all = True
 if __name__ == '__main__':
     if flag_run_all:
-        run()
+        run(flag_resample=True)
     else:
         parser = argparse.ArgumentParser(
             description="use this file to train and test defect prediction model")

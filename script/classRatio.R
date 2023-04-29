@@ -67,3 +67,65 @@ total_res[total_res$model=='autogluon_best_f1','model'] <- 'AG(F)'
 total_res[total_res$model=='autogluon_best_recall','model'] <- 'AG(R)'
 write.csv(total_res,'defualtEffort.csv',row.names = F,quote = F)
 
+
+##################################################################
+#######analyze instance by instance between dup and noDup#########
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+getwd()
+
+
+prediction_result_path <- ('../prediction_result/')
+# models <- c('autogluon','KNN','LR','NB','RF','SVM')
+models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
+
+first_flag <- T
+for (model in models) {
+  datasets <- list.files(file.path(prediction_result_path,model))
+  for (dataset in datasets) {
+    root_path <- file.path(prediction_result_path,model,dataset)
+    files <- list.files(root_path)
+    files_noDup <- files[grepl('diffToPreviousRelease',files)]
+    files_noDup <- sort(files_noDup)
+    files_Dup <- files[!grepl('diffToPreviousRelease',files)]
+    files_Dup <- sort(files_Dup)
+    stopifnot(length(files_noDup)==length(files_Dup))
+    for (idx in 1:length(files_noDup)) {
+      file_noDup <- files_noDup[idx]
+      file_Dup <- files_Dup[idx]
+      df_noDup <- read.csv(file.path(root_path,file_noDup))
+      df_Dup <- read.csv(file.path(root_path,file_Dup))
+      
+      keep <- df_Dup[,1] %in% df_noDup[,1]
+      df_Dup <- cbind(df_Dup,keep)
+      table(df_Dup[df_Dup$predictLabel==1,'keep'])
+      table(df_Dup[df_Dup$predictLabel==0,'keep'])
+      tp <- table(df_Dup[df_Dup$predictLabel==1 & df_Dup$actualBugLabel==1,'keep'])["FALSE"]
+      fp <- table(df_Dup[df_Dup$predictLabel==1 & df_Dup$actualBugLabel==0,'keep'])["FALSE"]
+      fn <- table(df_Dup[df_Dup$predictLabel==0 & df_Dup$actualBugLabel==1,'keep'])["FALSE"]
+      tn <- table(df_Dup[df_Dup$predictLabel==0 & df_Dup$actualBugLabel==0,'keep'])["FALSE"]
+      correct_value <- function(x){
+        if(is.na(x)){
+          x <- 0
+        }
+        return(x)
+      }
+      arr <- lapply(c(tp,fp,tn,fn), correct_value)
+      
+      
+      temp <- data.frame(model=model,dataset=dataset,file=file_Dup,
+                         tp=arr[[1]],
+                         fp=arr[[2]],
+                         tn=arr[[3]],
+                         fn=arr[[4]])
+      if(first_flag){
+        first_flag <- F
+        res <- temp
+      }else{
+        res[nrow(res)+1,] <- temp
+      }
+    }
+  }
+}
+
+write.csv(res,'deletedInstancesAnalyze.csv',row.names = F,quote = F)
+
