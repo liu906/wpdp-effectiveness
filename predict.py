@@ -193,12 +193,6 @@ def predict_by_row(row, df_column_config,modelName,flag_resample,prediction_resu
 
 
 
-
-
-
-
-
-
 def run_model_by_config_path(data_split_config_path, data_set_column_config, modelName,flag_resample,prediction_result_path):
     df_config = pd.read_csv(data_split_config_path)
     df_column_config = pd.read_csv(data_set_column_config, index_col=0)

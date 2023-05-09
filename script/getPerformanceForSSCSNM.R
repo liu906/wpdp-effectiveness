@@ -5,6 +5,7 @@ library(dplyr)
 prediction_result_path <- ('../prediction_result/')
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
 models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
+models <- c('autogluon_best_f1','KNN','LR','NB','RF','SVM')
 indicators <- c('recall','f1','g1','ifap2','roi_tp','acc','tp','fp','tn','fn','precision','auc_roc')
 
 
@@ -51,7 +52,6 @@ for (model in models) {
 
 #reformat comparison results to draw box line plot in origin lab
 for (dataset in datasets) {
-  root_path <- file.path(prediction_result_path,model,dataset)
   
   for (threshold in thresholds) {
     if(threshold==-1){
@@ -88,6 +88,7 @@ for (dataset in datasets) {
       new_colnames <- sapply(colnames(new_df), function(x) unlist(strsplit(x, "\\$")))
       rownames(new_colnames) <- c('dup','model')
       new_df <- rbind(new_colnames,new_df)
+      new_df['model',new_df['model',]=='autogluon_best_f1'] = 'Auto'
       write.csv(new_df,file.path('../performance/',paste(indicator,dataset,threshold,mode,'.csv',sep='_')),row.names = T,quote = F)
   
     }
@@ -168,9 +169,8 @@ write.csv(delta_result, file = file.path('../performance/','delta_result_median.
 # skESD test rank multiple models 
 library(ScottKnottESD)
 first_flag <- T
+datasets <- list.files(file.path(prediction_result_path,models[1]))
 for (dataset in datasets) {
-  
-  
   for (threshold in thresholds) {
     if(threshold==-1){
       mode = 'default'
@@ -244,3 +244,83 @@ res_path <- '../performance/two_level_skESD_result.csv'
 write.csv(total_two_level,res_path,row.names = F,quote = F)
 
 
+
+one_level_res
+total_two_level
+
+
+#compute Kendall's tau-b and Spearman's rank correlation coefficient to compare two rankings
+# 按照 col1 和 col2 进行拆分
+one_level_list <- split(one_level_res, list(one_level_res$dataset, one_level_res$threshold,one_level_res$indicator),sep='/')
+
+two_level_list <- split(total_two_level, list(total_two_level$threshold, total_two_level$indicator),sep='/')
+
+compute_k <- function(df) {
+  # 在这里进行对子数据框的操作
+  # 计算 Kendall's tau-b
+  
+  k <- cor(as.numeric(df[1,models]),as.numeric(df[2,models]), method = "kendall")
+  if(is.na(k)){
+    cat(as.numeric(df[1,models]),'\n')
+    cat(as.numeric(df[2,models]),'\n')
+    
+  }
+  return(k)
+}
+compute_s <- function(df) {
+  # 在这里进行对子数据框的操作
+  # 计算 Spearman's rho
+  s <- cor(as.numeric(df[1,models]),as.numeric(df[2,models]), method = "spearman")
+  
+  return(s)
+}
+compute_p <- function(df) {
+  # 在这里进行对子数据框的操作
+  # 计算 Pearson correlation 
+  s <- cor(as.numeric(df[1,models]),as.numeric(df[2,models]), method = "pearson")
+  
+  return(s)
+}
+compute_wilcox <- function(df) {
+  # 在这里进行对子数据框的操作
+  # 计算 Pearson correlation 
+  
+  w <- wilcox.test(as.numeric(df[1,models]),as.numeric(df[2,models]), paired = TRUE)$p.value
+  if(is.na(w) || is.nan(w)){
+    cat(as.numeric(df[1,models]),'\n')
+    cat(as.numeric(df[2,models]),'\n')
+  }
+  return(w)
+}
+
+
+# 使用 lapply() 函数将每个子数据框传递给函数进行操作，并将结果存储在一个列表中
+one_results_k <- lapply(one_level_list, compute_k)
+two_results_k <- lapply(two_level_list, compute_k)
+one_results_s <- lapply(one_level_list, compute_s)
+two_results_s <- lapply(two_level_list, compute_s)
+one_results_p <- lapply(one_level_list, compute_p)
+two_results_p <- lapply(two_level_list, compute_p)
+one_results_wilcox <- lapply(one_level_list, compute_wilcox)
+two_results_wilcox <- lapply(two_level_list, compute_wilcox)
+
+transform_list <- function(df_list){
+  my_matrix <- do.call(cbind, strsplit(names(df_list),'/'))
+  my_df <- as.data.frame(t(as.data.frame(my_matrix)))
+  my_array <- as.numeric(unlist(df_list)) 
+  my_df$cor <-  my_array
+  colnames(my_df) <- c('dataset','threshold','indicator')
+  return(my_df)
+}
+write.csv(transform_list(one_results_k),'../performance/one_level_skESD_Kendall.csv',row.names = F,quote = F)
+write.csv(transform_list(one_results_s),'../performance/one_level_skESD_Spearman.csv',row.names = F,quote = F)
+write.csv(transform_list(one_results_p),'../performance/one_level_skESD_Pearson.csv',row.names = F,quote = F)
+write.csv(transform_list(two_results_k),'../performance/two_level_skESD_Kendall.csv',row.names = F,quote = F)
+write.csv(transform_list(two_results_s),'../performance/two_level_skESD_Spearman.csv',row.names = F,quote = F)
+write.csv(transform_list(two_results_p),'../performance/two_level_skESD_Pearson.csv',row.names = F,quote = F)
+
+
+
+
+
+#todo 把样本变大，计算wilcox或者其他相关性系数

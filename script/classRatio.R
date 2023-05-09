@@ -30,7 +30,6 @@ write.csv(merged_df,'./script/dataset_classRatio.csv',row.names = F)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
 
-
 prediction_result_path <- ('../prediction_result/')
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
 models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','KNN','LR','NB','RF','SVM')
@@ -59,7 +58,6 @@ for (model in models) {
         total_res <- rbind(total_res,temp)
       }
     }
-    
   }
 }
 total_res[total_res$model=='autogluon_best','model'] <- 'AG(A)'
