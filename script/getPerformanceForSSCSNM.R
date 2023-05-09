@@ -321,6 +321,21 @@ write.csv(transform_list(two_results_p),'../performance/two_level_skESD_Pearson.
 
 
 
+# 把所有数据集的rank拼接在一起把样本变大，计算wilcox
+
+one_level_list2 <- split(one_level_res, list(one_level_res$threshold,one_level_res$indicator),sep='/')
+compute_wilcox_allDataset <- function(df) {
+  # 在这里进行对子数据框的操作
+  # 计算 Kendall's tau-b
+  split_res <- split(df,list(df$diffToPreviousRelease))
+  df_origin <- split_res$original
+  df_noDup <- split_res$`-dup`
+  
+  
+  w <- wilcox.test(as.numeric(t(unlist(df_origin[,models]))),as.numeric(t(unlist(df_noDup[,models]))), paired = T)$p.value
+  return(w)
+}
+one_results_wilcox_allDataset <- lapply(one_level_list2, compute_wilcox_allDataset)
+write.csv(transform_list(one_results_wilcox_allDataset),'../performance/one_level_skESD_wilcox_allDataset.csv',row.names = F,quote = F)
 
 
-#todo 把样本变大，计算wilcox或者其他相关性系数
