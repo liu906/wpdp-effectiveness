@@ -2,14 +2,35 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
 source("../../MATTER/performance.r")
 library(dplyr)
-prediction_result_path <- ('../prediction_result/')
+
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
-models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
-models <- c('autogluon_best_f1','KNN','LR','NB','RF','SVM')
 indicators <- c('recall','f1','g1','ifap2','roi_tp','acc','tp','fp','tn','fn','precision','auc_roc')
 
 
-thresholds = c(20,0.2,-1,0.1,10,0.5,5)
+
+
+
+if(F){
+  performance_root <- '../performance/'
+  prediction_result_path <- ('../prediction_result/')
+}else{
+  performance_root <- '../performance_resample'
+  prediction_result_path <- ('../prediction_result_resample/')
+}
+dir.create(performance_root,showWarnings = F)
+
+if(F){
+  models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
+}else{
+  models <- c('autogluon_best_f1','KNN','LR','NB','RF','SVM')
+}
+
+if(F){
+  thresholds = c(20,0.2,-1,0.1,10,0.5,5)
+}else{
+  thresholds = c(-1)
+}
+
 
 for (model in models) {
   datasets <- list.files(file.path(prediction_result_path,model))
@@ -39,8 +60,8 @@ for (model in models) {
       res$target <- result
       res <- cbind(res[1], diffToPreviousRelease = target, res[-1])
       
-      dir.create(file.path('../performance/',model),showWarnings=F,recursive=T)
-      res_file_path <- file.path('../performance/',model,paste(dataset,threshold,mode,'.csv',sep='_'))
+      dir.create(file.path(performance_root,model),showWarnings=F,recursive=T)
+      res_file_path <- file.path(performance_root,model,paste(dataset,threshold,mode,'.csv',sep='_'))
       write.csv(res,file = res_file_path,row.names = FALSE)
     }
     
@@ -65,7 +86,7 @@ for (dataset in datasets) {
     first_flag <- T
     for (model in models) {
     datasets <- list.files(file.path(prediction_result_path,model))
-    res_file_path <- file.path('../performance/',model,paste(dataset,threshold,mode,'.csv',sep='_'))
+    res_file_path <- file.path(performance_root,model,paste(dataset,threshold,mode,'.csv',sep='_'))
     sub_df <- read.csv(res_file_path)
     sub_df <- cbind(model = model, sub_df)
     if(first_flag){
@@ -77,7 +98,7 @@ for (dataset in datasets) {
     }
     df$diffToPreviousRelease <- factor(df$diffToPreviousRelease, ordered = TRUE, levels = c("original", "-dup"))
     df <- df[order(df$diffToPreviousRelease),]
-    write.csv(df,file.path('../performance/',paste('summary',dataset,threshold,mode,'.csv',sep='_')),row.names = F,quote = F)
+    write.csv(df,file.path(performance_root,paste('summary',dataset,threshold,mode,'.csv',sep='_')),row.names = F,quote = F)
     
     
     for(indicator in indicators){
@@ -89,7 +110,7 @@ for (dataset in datasets) {
       rownames(new_colnames) <- c('dup','model')
       new_df <- rbind(new_colnames,new_df)
       new_df['model',new_df['model',]=='autogluon_best_f1'] = 'Auto'
-      write.csv(new_df,file.path('../performance/',paste(indicator,dataset,threshold,mode,'.csv',sep='_')),row.names = T,quote = F)
+      write.csv(new_df,file.path(performance_root,paste(indicator,dataset,threshold,mode,'.csv',sep='_')),row.names = T,quote = F)
   
     }
     
@@ -112,7 +133,7 @@ for (dataset in datasets) {
     }else{
       mode = 'SSC'
     }
-    df <- read.csv(file.path('../performance/',paste('summary',dataset,threshold,mode,'.csv',sep='_')))
+    df <- read.csv(file.path(performance_root,paste('summary',dataset,threshold,mode,'.csv',sep='_')))
     df <- cbind(threshold=threshold,df)
     source_files <- unique(df$source)
     for (model in models) {
@@ -153,14 +174,14 @@ delta_result <- res %>%
   summarise(across(indicators, 
                    mean, 
                    na.rm = TRUE))
-write.csv(delta_result, file = file.path('../performance/','delta_result_mean.csv'), row.names = FALSE)
+write.csv(delta_result, file = file.path(performance_root,'delta_result_mean.csv'), row.names = FALSE)
 
 delta_result <- res %>% 
   group_by(dataset,model,threshold) %>% 
   summarise(across(indicators, 
                    median, 
                    na.rm = TRUE))
-write.csv(delta_result, file = file.path('../performance/','delta_result_median.csv'), row.names = FALSE)
+write.csv(delta_result, file = file.path(performance_root,'delta_result_median.csv'), row.names = FALSE)
 
 
 
@@ -180,7 +201,7 @@ for (dataset in datasets) {
     }else{
       mode = 'SSC'
     }
-    total_df <- read.csv(file.path('../performance/',paste('summary',dataset,threshold,mode,'.csv',sep='_')))
+    total_df <- read.csv(file.path(performance_root,paste('summary',dataset,threshold,mode,'.csv',sep='_')))
     total_df <- cbind(threshold=threshold,total_df)
     diffToPre <- unique(total_df$diffToPreviousRelease)
     
@@ -215,7 +236,7 @@ for (dataset in datasets) {
 }
 
 one_level_res <- res[order(res$mode,res$indicator),]
-res_path <- '../performance/one_level_skESD_result.csv'
+res_path <- file.path(performance_root,'one_level_skESD_result.csv')  
 write.csv(res,res_path,row.names = F,quote = F)
 
 first_flag <- T
@@ -225,6 +246,7 @@ for (threshold in thresholds) {
     for (d in unique(one_level_res$diffToPreviousRelease)) {
       sub_df <- one_level_res[one_level_res$threshold==threshold & one_level_res$indicator==indicator & one_level_res$diffToPreviousRelease==d,models]  
       two_level_result <- sk_esd(data.frame(lapply(sub_df,as.integer)), version='np')$group
+      
       two_level_result <- cbind(threshold=threshold, indicator=indicator, diffToPreviousRelease=d,t(data.frame(two_level_result)))
       if(first_flag){
         first_flag <- F
@@ -240,7 +262,7 @@ class(total_two_level)
 total_two_level <- total_two_level[order(total_two_level$threshold,total_two_level$indicator),]
 total_two_level <- cbind(total_two_level[,1:3],data.frame(lapply(total_two_level[,models],as.integer)))
 
-res_path <- '../performance/two_level_skESD_result.csv'
+res_path <- file.path(performance_root,'two_level_skESD_result.csv')
 write.csv(total_two_level,res_path,row.names = F,quote = F)
 
 
@@ -312,12 +334,12 @@ transform_list <- function(df_list){
   colnames(my_df) <- c('dataset','threshold','indicator')
   return(my_df)
 }
-write.csv(transform_list(one_results_k),'../performance/one_level_skESD_Kendall.csv',row.names = F,quote = F)
-write.csv(transform_list(one_results_s),'../performance/one_level_skESD_Spearman.csv',row.names = F,quote = F)
-write.csv(transform_list(one_results_p),'../performance/one_level_skESD_Pearson.csv',row.names = F,quote = F)
-write.csv(transform_list(two_results_k),'../performance/two_level_skESD_Kendall.csv',row.names = F,quote = F)
-write.csv(transform_list(two_results_s),'../performance/two_level_skESD_Spearman.csv',row.names = F,quote = F)
-write.csv(transform_list(two_results_p),'../performance/two_level_skESD_Pearson.csv',row.names = F,quote = F)
+write.csv(transform_list(one_results_k),file.path(performance_root,'one_level_skESD_Kendall.csv'),row.names = F,quote = F)
+write.csv(transform_list(one_results_s),file.path(performance_root,'one_level_skESD_Spearman.csv'),row.names = F,quote = F)
+write.csv(transform_list(one_results_p),file.path(performance_root,'one_level_skESD_Pearson.csv'),row.names = F,quote = F)
+write.csv(transform_list(two_results_k),file.path(performance_root,'two_level_skESD_Kendall.csv'),row.names = F,quote = F)
+write.csv(transform_list(two_results_s),file.path(performance_root,'two_level_skESD_Spearman.csv'),row.names = F,quote = F)
+write.csv(transform_list(two_results_p),file.path(performance_root,'two_level_skESD_Pearson.csv'),row.names = F,quote = F)
 
 
 
@@ -336,6 +358,8 @@ compute_wilcox_allDataset <- function(df) {
   return(w)
 }
 one_results_wilcox_allDataset <- lapply(one_level_list2, compute_wilcox_allDataset)
-write.csv(transform_list(one_results_wilcox_allDataset),'../performance/one_level_skESD_wilcox_allDataset.csv',row.names = F,quote = F)
+res <- transform_list(one_results_wilcox_allDataset)
+colnames(res) <- c('threshold','indicator','p-value')
+write.csv(res,file.path(performance_root,'one_level_skESD_wilcox_allDataset.csv'),row.names = F,quote = F)
 
 
