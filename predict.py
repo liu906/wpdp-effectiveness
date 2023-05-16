@@ -83,8 +83,12 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC,flag
     sloc = X_test[SLOC].values.ravel()
     if flag_resample:
         sm = SMOTE(random_state=42)
-        X_train, y_train = sm.fit_resample(X_train, y_train)
-        train_data = X_train
+        try:
+            X_train, y_train = sm.fit_resample(X_train, y_train)
+        except ValueError as e:
+            # 捕获ValueError异常并打印错误信息
+            print(f"error occurs when smote")
+        train_data = X_train.copy()
         train_data[LABEL] = y_train
 
 
@@ -163,7 +167,7 @@ def predict_by_row(row, df_column_config,modelName,flag_resample,prediction_resu
 
     res_file_name = train_path.split('/')[-1] + '_' + test_path.split('/')[-1]
     if os.path.exists(os.path.join(prediction_result_path, res_file_name)):
-        print('skip')
+        # print('skip')
         return 'skip'
     train_data = pd.read_csv(train_path)
     test_data = pd.read_csv(test_path)
@@ -183,10 +187,7 @@ def predict_by_row(row, df_column_config,modelName,flag_resample,prediction_resu
         try:
             prediction_result_df, feature_importance = normal_prediction(train_data, test_data, modelName, IDs, LABEL, DROPS, SLOC,flag_resample)
             prediction_result_df.to_csv(os.path.join(prediction_result_path, res_file_name), index=False)
-            # if modelName == 'autogluon' or modelName == 'autogluon_best' or modelName=='autogluon_best_recall'or modelName=='autogluon_best_f1':
-            #     feature_importance['train_path'] = train_path
-            #     feature_importance['test_path'] = test_path
-            #     feature_importance.to_csv('feature_importance.csv', index=True, mode='a')
+
         except ValueError as e:
             # handle the exception raised from bar()
             print(f"An error occurred predicting: {e}")
@@ -208,8 +209,9 @@ def run(flag_resample):
     else:
         prediction_result_path = 'prediction_result_resample'
 
-    # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
-    modelNames = ['autogluon_best_f1']
+    modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
+    # modelNames = ['RF']
+    # modelNames = ['autogluon_best_f1']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',

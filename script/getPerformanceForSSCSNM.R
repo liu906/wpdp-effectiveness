@@ -41,8 +41,7 @@ for (model in models) {
       if(threshold==-1){
         mode = 'default'
         
-      }
-      else if(threshold<1){
+      }else if(threshold<1){
         mode = 'SNM'
       }else{
         mode = 'SSC'
