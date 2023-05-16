@@ -209,9 +209,9 @@ def run(flag_resample):
     else:
         prediction_result_path = 'prediction_result_resample'
 
-    modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
-    # modelNames = ['RF']
-    # modelNames = ['autogluon_best_f1']
+    # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
+
+    modelNames = ['autogluon_best_f1']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',
