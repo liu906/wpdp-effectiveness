@@ -3,14 +3,27 @@ getwd()
 source("../../MATTER/performance.r")
 library(dplyr)
 
+reformat <- function(res,indicator){
+  res <- res %>% group_by(source)
+  
+  res <- res %>% mutate(Difference = last({{indicator}}) - first({{indicator}}))
+  
+  a <- res %>% filter(diffToPreviousRelease == 'original') %>%
+    select(source,Difference,{{indicator}})
+  b <- res %>% filter(diffToPreviousRelease == '-dup') %>%
+    select({{indicator}})
+  a <- as.data.frame(a)
+  b <- as.data.frame(b)[,2]
+  df <- cbind(a,noDup=b)
+  return(df[order(df$Difference),])
+}
+
+
 # models <- c('autogluon','KNN','LR','NB','RF','SVM')
 indicators <- c('recall','f1','g1','ifap2','roi_tp','acc','tp','fp','tn','fn','precision','auc_roc')
 
 
-
-
-
-if(F){
+if(T){
   performance_root <- '../performance/'
   prediction_result_path <- ('../prediction_result/')
 }else{
@@ -58,14 +71,32 @@ for (model in models) {
       result <- unlist(second_elements)
       res$target <- result
       res <- cbind(res[1], diffToPreviousRelease = target, res[-1])
-      
       dir.create(file.path(performance_root,model),showWarnings=F,recursive=T)
       res_file_path <- file.path(performance_root,model,paste(dataset,threshold,mode,'.csv',sep='_'))
       write.csv(res,file = res_file_path,row.names = FALSE)
+      
+      #simple output for line plot      
+      r <- reformat(res,recall)
+      linePlot_file_path <- file.path(performance_root,model,paste('linePlot',dataset,threshold,mode,'recall','.csv',sep='_'))
+      write.csv(r,file = linePlot_file_path,row.names = FALSE)
+      r <- reformat(res,precision)
+      linePlot_file_path <- file.path(performance_root,model,paste('linePlot',dataset,threshold,mode,'precision','.csv',sep='_'))
+      write.csv(r,file = linePlot_file_path,row.names = FALSE)
+      r <- reformat(res,f1)
+      linePlot_file_path <- file.path(performance_root,model,paste('linePlot',dataset,threshold,mode,'f1','.csv',sep='_'))
+      write.csv(r,file = linePlot_file_path,row.names = FALSE)
+      r <- reformat(res,g1)
+      linePlot_file_path <- file.path(performance_root,model,paste('linePlot',dataset,threshold,mode,'g1','.csv',sep='_'))
+      write.csv(r,file = linePlot_file_path,row.names = FALSE)
+      r <- reformat(res,auc_roc)
+      linePlot_file_path <- file.path(performance_root,model,paste('linePlot',dataset,threshold,mode,'auc_roc','.csv',sep='_'))
+      write.csv(r,file = linePlot_file_path,row.names = FALSE)
+    
     }
     
   }
 }
+
 
 
 
@@ -268,6 +299,7 @@ write.csv(total_two_level,res_path,row.names = F,quote = F)
 
 one_level_res
 total_two_level
+
 
 
 #compute Kendall's tau-b and Spearman's rank correlation coefficient to compare two rankings

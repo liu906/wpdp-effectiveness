@@ -7,6 +7,7 @@ Logistic regression (LR) done
 auto-gloun
 """
 from tqdm import tqdm
+from collections import Counter
 from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -81,10 +82,12 @@ def normal_prediction(train_data, test_data, model, IDs, LABEL, DROPS, SLOC,flag
     X_train = train_data.drop(LABEL, axis=1)
     X_test = test_data.drop(LABEL, axis=1)
     sloc = X_test[SLOC].values.ravel()
+    print('before: ', Counter(y_train))
     if flag_resample:
         sm = SMOTE(random_state=42)
         try:
             X_train, y_train = sm.fit_resample(X_train, y_train)
+            print('after: ', Counter(y_train))
         except ValueError as e:
             # 捕获ValueError异常并打印错误信息
             print(f"error occurs when smote")
@@ -209,9 +212,9 @@ def run(flag_resample):
     else:
         prediction_result_path = 'prediction_result_resample'
 
-    # modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
+    modelNames = ['LR', 'KNN', 'NB', 'RF', 'SVM']
 
-    modelNames = ['autogluon_best_f1']
+    # modelNames = ['autogluon_best_f1']
 
     for modelName in modelNames:
         run_model_by_config_path(data_split_config_path='./script/dataset_config.csv',
