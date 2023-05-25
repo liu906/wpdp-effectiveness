@@ -15,9 +15,19 @@ for (idx in 1:nrow(merged_df)) {
   test_noDup_df <- read.csv(one_row$test_path_noDup)
   
   ratio <- table(test_df$bug)["0"]/table(test_df$bug)["1"]
+  num_neg <- table(test_df$bug)["0"]
+  num_pos <- table(test_df$bug)["1"]
+  
   ratio_noDup <- table(test_noDup_df$bug)["0"]/table(test_noDup_df$bug)["1"]
+  num_neg_noDup <- table(test_noDup_df$bug)["0"]
+  num_pos_noDup <- table(test_noDup_df$bug)["1"]
+  
   merged_df[idx,'class_ratio'] <- ratio
   merged_df[idx,'class_ratio_noDup'] <- ratio_noDup
+  merged_df[idx,'num_neg'] <- num_neg
+  merged_df[idx,'num_pos'] <- num_pos
+  merged_df[idx,'num_neg_noDup'] <- num_neg_noDup
+  merged_df[idx,'num_pos_noDup'] <- num_pos_noDup
 }
 write.csv(merged_df,'./script/dataset_classRatio.csv',row.names = F)
 # conclusion is class is more balanced after deleting duplicate instances, 
