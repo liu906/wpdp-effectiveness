@@ -7,6 +7,39 @@ res_root <- ('../performance/comparedSmote')
 dir.create(res_root,showWarnings = F)
 indicators <- c('recall','f1','g1','tp','fp','tn','fn','precision','auc_roc')
 posfix <- 'default'
+compute_eff <-function(value){
+  if(abs(value)<0.1){
+    return("negligible")
+  }
+  else if(abs(value)<0.3){
+    return("small")
+  }else if(abs(value)<0.5){
+    return("medium")
+  }else{
+    return("large")
+  }
+}
+get_eff_size <- function(x,y,type){
+  if(type=='cliff'){
+    return(as.character(cliff.delta(x,y)$magnitude) )
+  }else if(type=='wilcox'){
+    #compute another effect size
+    pvalue <- wilcox.test(x,y,paired=T)$p.value
+    if(!is.nan(pvalue)){
+      z <- qnorm(1 - pvalue/2)
+      
+    }else{
+      z <- qnorm(1 - 1/2)
+    }
+    if(!is.nan(pvalue)){
+      z.smote <- qnorm(1 - pvalue/2)
+    }else{
+      z <- qnorm(1 - 1/2)
+    }
+    return(compute_eff(z / sqrt(length(x))))
+  }
+}
+
 
 if(F){
   models <- c('autogluon_best_f1','autogluon_best_recall','autogluon_best','autogluon','KNN','LR','NB','RF','SVM')
@@ -41,37 +74,15 @@ for (model in models) {
       eff.origin <- cliff.delta(getNumeric(res$original),getNumeric(res$`origial+noDup`))$magnitude
       eff.smote <- cliff.delta(getNumeric(res$smote),getNumeric(res$`smote+noDup`))$magnitude
       
-      compute_eff <-function(value){
-        if(abs(value)<0.1){
-          return("negligible")
-        }
-        else if(abs(value)<0.3){
-          return("small")
-        }else if(abs(value)<0.5){
-          return("medium")
-        }else{
-          return("large")
-        }
-      }
       
-      #compute another effect size
+
       
-      if(!is.nan(pvalue.origin)){
-        z <- qnorm(1 - pvalue.origin/2)
-        
-      }else{
-        z <- qnorm(1 - 1/2)
-      }
-      if(!is.nan(pvalue.smote)){
-        z.smote <- qnorm(1 - pvalue.smote/2)
-      }else{
-        z <- qnorm(1 - 1/2)
-      }
+
       
       
       
-      eff2.origin <- compute_eff(z / sqrt(length(res$original)))  
-      eff2.smote <- compute_eff(z.smote / sqrt(length(res$smote))) 
+      eff2.origin <-  get_eff_size(getNumeric(res$original),getNumeric(res$`origial+noDup`),'wilcox') #compute_eff(z / sqrt(length(res$original)))  
+      eff2.smote <- get_eff_size(getNumeric(res$smote),getNumeric(res$`smote+noDup`),'wilcox') #compute_eff(z.smote / sqrt(length(res$smote))) 
       
       
       pvalue_df <-  rbind(pvalue_df,data.frame(model,indicator,dataset,pvalue.origin,eff.origin,eff2.origin,pvalue.smote,eff.smote,eff2.smote))
@@ -92,6 +103,9 @@ write.csv(mean_df,file = file.path(res_root,'meanValue-dupVsNonDup.csv'),row.nam
       
 
 library(dplyr)
+
+
+
 summary_mean_alldataset <- function(origin_root){
   summary_files <- list.files(origin_root,pattern = '^summary.*default_.csv')
   
@@ -128,11 +142,13 @@ summary_pvalue_alldataset <- function(origin_root,resample_root){
     sub_res_df2 <- res_df2[res_df2$model==model,]
     calculate_pvalue <- function(df1,df2){
       df_pvalue <- data.frame()
+      
       for (idx in 7:ncol(df1)) {
         pvalue <- wilcox.test(df1[,idx],df2[,idx],paired=T)$p.value
-        cliff <- as.character(cliff.delta(df1[,idx],df2[,idx])$magnitude) 
+        #cliff <- as.character(cliff.delta(df1[,idx],df2[,idx])$magnitude) 
+        eff_size <- get_eff_size(df1[,idx],df2[,idx],'wilcox')
         
-        temp <- data.frame(indicator=colnames(df1)[idx],pvalue=pvalue,cliff=cliff)
+        temp <- data.frame(indicator=colnames(df1)[idx],pvalue=pvalue,eff_size=eff_size)
         df_pvalue <- rbind(df_pvalue,temp)
       }
       return(df_pvalue)
@@ -145,9 +161,9 @@ summary_pvalue_alldataset <- function(origin_root,resample_root){
     sub_result <- cbind(model=model,
                         indicator=sub_result$indicator, 
                         pvalue_smote_dup=sub_result$pvalue,
-                        cliff_smote_dup=sub_result$cliff,
+                        eff_smote_dup=sub_result$eff_size,
                         pvalue_smote_nodup=sub_result_noDup$pvalue,
-                        cliff_smote_nodup=sub_result_noDup$cliff)
+                        eff_smote_nodup=sub_result_noDup$eff_size)
     
     result <- rbind(result,sub_result)
   }
