@@ -6,3 +6,7 @@
 2. run `python pureCompare.py` to store diff information between source and target releases  
 
 3. run `python detectDuplication.py` to store new target release without duplicate modules  
+
+## run our experiment   
+
+`python predict.py`
