@@ -5,6 +5,9 @@ import sys
 import os
 import pandas as pd
 import sys
+import time
+import csv
+
 if sys.platform.startswith('linux'):
     print("running on Linux")
     sys.path.append('/root/scitools/bin/linux64/Python') # 设置PYTHONPATH
@@ -159,6 +162,22 @@ def compare(old_udb_path, new_udb_path, old_release_name, new_release_name, modu
     new_db.close()
     res.to_csv(resname, index=False)
 
+# 在 compare 函数中，添加一个记录日志的函数
+def log_to_csv(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset, runtime):
+    log_file = 'result/TimeComplexity/comparison_time_complexity_log.csv'
+    os.makedirs("result/TimeComplexity/",exist_ok=True)
+
+    # 检查是否已经存在日志文件，如果不存在，则创建一个新的
+    if not os.path.exists(log_file):
+        with open(log_file, mode='w', newline='') as log_csv:
+            writer = csv.writer(log_csv)
+            # 添加标题行
+            writer.writerow(['Old UDB Path', 'New UDB Path', 'Old Release Name', 'New Release Name', 'Module Type', 'Dataset', 'Runtime'])
+
+    # 将参数和运行时长写入日志文件
+    with open(log_file, mode='a', newline='') as log_csv:
+        writer = csv.writer(log_csv)
+        writer.writerow([old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset, runtime])
 
 def test():
     old_udb_path = "./udb/Metrics-Repo-2010/ant/ant-1.3.udb"
@@ -167,8 +186,8 @@ def test():
     new_release_name = 'ant-1.4'
     module_type = 'class'
     compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type)
-
-if __name__ == '__main__':
+def main():
+    start_time = time.time()
 
     parser = argparse.ArgumentParser(
         description="use this script to analyze the same and different modules in two consecutive releases")
@@ -188,4 +207,13 @@ if __name__ == '__main__':
     module_type = args.module_type
     dataset = args.dataset
     compare(old_udb_path, new_udb_path, old_release_name, new_release_name, module_type, dataset)
+
+    end_time = time.time()
+    runtime = end_time - start_time
+    log_to_csv(args.old_udb_path, args.new_udb_path, args.old_release_name, args.new_release_name, args.module_type, args.dataset, runtime)
+
+if __name__ == '__main__':
+    main()
+
+
 
